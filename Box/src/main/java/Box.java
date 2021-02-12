@@ -3,15 +3,15 @@ public class Box
 {
 	public String box1()
 	{
-		return Box 1: M 20.0 10.0 v -5.0 h 20.0 v 5.0 h -20.0;
+		return "M 20.0 10.0 v -5.0 h 20.0 v 5.0 h -20.0";
 	}
 	public String box2()
 	{
-		return Box 2: M 20.0 10.0 v 10.0 h 20.0 v -10.0;
+		return M "20.0 10.0 v 10.0 h 20.0 v -10.0";
 	}
 	public String box3()
 	{
-		return M 20.0 10.0 h-5.0 v10.0 h 5.0;
+		return M "20.0 10.0 h-5.0 v10.0 h 5.0";
 	}
 	public String box4()
     {
