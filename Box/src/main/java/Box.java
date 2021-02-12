@@ -5,14 +5,17 @@ public class Box
 	{
 		return "M 20.0 10.0 v-5.0 h 20.0 v5.0 h-20.0";
 	}
+	
 	public String box2()
 	{
 		return "M 20.0 10.0 v10.0 h20.0 v-10.0";
 	}
+
 	public String box3()
 	{
 		return "M 20.0 10.0 h-5.0 v10.0 h5.0";
 	}
+
 	public String box4()
     {
         return "M 20.0 20.0 v5.0 h20.0 v-5.0";
