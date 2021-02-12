@@ -1,7 +1,7 @@
 package box;
 
 /**
- * Hello world!
+ * Group 5
  *
  */
 public class App 
