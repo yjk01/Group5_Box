@@ -22,7 +22,7 @@ public class BoxTest
     @Test
     public void Box1() {
         try {
-            string box_one = "Box 1: M 20.0 10.0 v -5.0 h 20.0 v 5.0 h -20.0";
+            string box_one = "M 20.0 10.0 v-5.0 h20.0 v5.0 h-20.0";
             string expect = box_test.Box1();
             assertEquals(box_one, expect);
         } catch (Exception e) {
@@ -33,7 +33,7 @@ public class BoxTest
     @Test
     public void Box2() {
         try {
-            string box_one = "Box 2: M 20.0 10.0 v 10.0 h 20.0 v -10.0";
+            string box_one = "M 20.0 10.0 v10.0 h20.0 v-10.0";
             string expect = box_test.Box2();
             assertEquals(box_one, expect);
         } catch (Exception e) {
@@ -44,7 +44,7 @@ public class BoxTest
     @Test
     public void Box3() {
         try {
-            string box_one = "Box 3: M 20.0 10.0 h-5.0 v10.0 h 5.0";
+            string box_one = "M 20.0 10.0 h-5.0 v10.0 h5.0";
             string expect = box_test.Box3();
             assertEquals(box_one, expect);
         } catch (Exception e) {
@@ -55,7 +55,7 @@ public class BoxTest
     @Test
     public void Box4() {
         try {
-            string box_one = "Box 4: M 20.0 20.0 v5.0 h20.0 v-5.0";
+            string box_one = "M 20.0 20.0 v5.0 h20.0 v-5.0";
             string expect = box_test.Box4();
             assertEquals(box_one, expect);
         } catch (Exception e) {
@@ -66,7 +66,7 @@ public class BoxTest
     @Test
     public void Box5() {
         try {
-            string box_one = "Box 5: M 40.0 10.0 h5.0 v10.0 h-5.0";
+            string box_one = "M 40.0 10.0 h5.0 v10.0 h-5.0";
             string expect = box_test.Box5();
             assertEquals(box_one, expect);
         } catch (Exception e) {
@@ -77,7 +77,7 @@ public class BoxTest
     @Test
     public void Box6() {
         try {
-            string box_one = "Box 6: M 45.0 10.0 h20.0 v10.0 hgit ad-20.0";
+            string box_one = "M 45.0 10.0 h20.0 v10.0 h-20.0";
             string expect = box_test.Box6();
             assertEquals(box_one, expect);
         } catch (Exception e) {
