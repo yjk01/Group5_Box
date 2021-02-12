@@ -3,7 +3,7 @@ public class Box
 {
 	public String box1()
 	{
-		return "M 20.0 10.0 v-5.0 h 20.0 v5.0 h-20.0";
+		return "M 20.0 10.0 v-5.0 h20.0 v5.0 h-20.0";
 	}
 
 	public String box2()
