@@ -1,0 +1,38 @@
+Glossary:
+
+	A
+adaptive planning: organizing information into strategic decisions
+agile: A method of project management including reassessing plans and a division of tasks
+	B
+base: the bottom of the box
+box: a figure made up of 5 sides that is used to hold things
+budget: set aside a particular amount of money for a project
+bug: an error in a computer program or system
+	C
+code: arrangement of data in a computer program
+	D
+documentation: material that serves as a record
+	E
+elevator pitch: a short and straight to the point sales pitch
+	F
+furious four: time, budget, quality, scope
+	G
+gitHub: version control tool
+	H
+horizontal: a straight line going from left to right
+	I
+inception deck: a list of questions to ask before starting a project
+iteration: the engine for getting stuff done
+	J
+java: an object-oriented programming language
+	K
+	L
+length: the measurement of size
+	M
+maven: a way to run tests on java code
+	N
+Nice-to-have list: a list of things that you want in your project
+NOT list: a list of things you don't want in your project 
+	O
+
+
