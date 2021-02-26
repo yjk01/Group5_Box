@@ -7,8 +7,8 @@
   <version>.98</version>
   <name>Box</name>
   <url>http://maven.apache.org</url>
-  
-    <properties>
+
+  <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
