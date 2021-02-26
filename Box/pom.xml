@@ -7,13 +7,8 @@
   <version>.98</version>
   <name>Box</name>
   <url>http://maven.apache.org</url>
-<<<<<<< HEAD
 
   <properties>
-=======
-  
-    <properties>
->>>>>>> c85d56ab0b2f7b4c1e2a0104003f8df95e8c8025
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
@@ -23,11 +18,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-<<<<<<< HEAD
-      <version>4.1.1</version>
-=======
       <version>4.11</version>
->>>>>>> c85d56ab0b2f7b4c1e2a0104003f8df95e8c8025
       <scope>test</scope>
     </dependency>
   </dependencies>
