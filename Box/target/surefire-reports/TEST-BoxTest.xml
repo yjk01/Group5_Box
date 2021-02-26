@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="BoxTest" time="0.006" errors="0" skipped="0">
+<testsuite tests="12" failures="0" name="BoxTest" time="0.008" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="15.0.1+9"/>
     <property name="sun.boot.library.path" value="/usr/local/Cellar/openjdk/15.0.1/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="maven.multiModuleProjectDirectory" value="/Users/juliolopez/Documents/Group5_Box/Box"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/juliolopez/Desktop/code/SE1/Group5_Box/Box"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="https://openjdk.java.net/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -13,7 +13,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/Users/juliolopez/Documents/Group5_Box/Box"/>
+    <property name="user.dir" value="/Users/juliolopez/Desktop/code/SE1/Group5_Box/Box"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="java.runtime.version" value="15.0.1+9"/>
     <property name="os.arch" value="x86_64"/>
@@ -30,7 +30,7 @@
     <property name="java.class.version" value="59.0"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="10.15.6"/>
+    <property name="os.version" value="10.16"/>
     <property name="library.jansi.path" value="/usr/local/Cellar/maven/3.6.3_1/libexec/lib/jansi-native"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="user.home" value="/Users/juliolopez"/>
@@ -57,10 +57,16 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase classname="BoxTest" name="Box1" time="0.003"/>
+  <testcase classname="BoxTest" name="Box1" time="0.008"/>
   <testcase classname="BoxTest" name="Box2" time="0"/>
   <testcase classname="BoxTest" name="Box3" time="0"/>
   <testcase classname="BoxTest" name="Box4" time="0"/>
-  <testcase classname="BoxTest" name="Box5" time="0.002"/>
-  <testcase classname="BoxTest" name="Box6" time="0.001"/>
+  <testcase classname="BoxTest" name="Box5" time="0"/>
+  <testcase classname="BoxTest" name="Box6" time="0"/>
+  <testcase classname="BoxTest" name="Box7" time="0"/>
+  <testcase classname="BoxTest" name="Box8" time="0"/>
+  <testcase classname="BoxTest" name="Box9" time="0"/>
+  <testcase classname="BoxTest" name="Box10" time="0"/>
+  <testcase classname="BoxTest" name="Box11" time="0"/>
+  <testcase classname="BoxTest" name="Box12" time="0"/>
 </testsuite>

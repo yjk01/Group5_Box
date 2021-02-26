@@ -87,4 +87,69 @@ public class BoxTest
             System.out.println("Box6 catch");
         }
     }
+    @Test
+    public void Box7() {
+        try {
+            String box_one = "M 20.0 10.0 v-5.0 h20.0 v5.0 h-20.0";
+            String expect = box_test.box1();
+            assertEquals(box_one, expect);
+        } catch (Exception e) {
+            System.out.println("Box1 catch");
+        }
+    }
+
+    @Test
+    public void Box8() {
+        try {
+            String box_one = "M 20.0 10.0 v10.0 h20.0 v-10.0";
+            String expect = box_test.box2();
+            assertEquals(box_one, expect);
+        } catch (Exception e) {
+            System.out.println("Box2 catch");
+        }
+    }
+
+    @Test
+    public void Box9() {
+        try {
+            String box_one = "M 20.0 10.0 h-5.0 v10.0 h5.0";
+            String expect = box_test.box3();
+            assertEquals(box_one, expect);
+        } catch (Exception e) {
+            System.out.println("Box3 catch");
+        }
+    }
+
+    @Test
+    public void Box10() {
+        try {
+            String box_one = "M 20.0 20.0 v5.0 h20.0 v-5.0";
+            String expect = box_test.box4();
+            assertEquals(box_one, expect);
+        } catch (Exception e) {
+            System.out.println("Box4 catch");
+        }
+    }
+
+    @Test
+    public void Box11() {
+        try {
+            String box_one = "M 40.0 10.0 h5.0 v10 h-5.0";
+            String expect = box_test.box5();
+            assertEquals(box_one, expect);
+        } catch (Exception e) {
+            System.out.println("Box5 catch");
+        }
+    }
+
+    @Test
+    public void Box12() {
+        try {
+            String box_one = "M 45.0 10.0 h20.0 v10.0 h-20.0";
+            String expect = box_test.box6();
+            assertEquals(box_one, expect);
+        } catch (Exception e) {
+            System.out.println("Box6 catch");
+        }
+    }
 }
