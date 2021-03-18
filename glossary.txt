@@ -34,5 +34,23 @@ maven: a way to run tests on java code
 Nice-to-have list: a list of things that you want in your project
 NOT list: a list of things you don't want in your project 
 	O
+	P
+planning: includes many concepts such as adaptibility, flexible on scope, master story list, and releases
+project: a collaboration that is planned to achieve a certain goal
+	Q
+quality: something of excellence that is unmeasurable, but is determined by the customer
+	R
+repository: a place where a project is stored
+	S
+scope: outlines the requirements to be accomplished and the resources needed to deliver them
+	T
+team velocity: the amount of work a team can tackle
+	U
+unit tests: individual units of source code are tested to determine whether they are fit for use
+	V
+	W
+	X
+	Y
+	Z
 
 

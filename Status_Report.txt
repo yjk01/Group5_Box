@@ -1,7 +1,9 @@
-# of Testcases: 12
+# of Testcases: 8
 # of Documentations: 3
 # of Java files: 2
 ----------------------
 
 02/25/2021
 - Test cases test whether svg code matches expectations
+03/5/2021
+- Made test cases more useful, added unit tests
