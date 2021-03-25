@@ -1,0 +1,9 @@
+Cyclomatic Complexity
+
+M = E - N + 2P
+
+# of edge cases: 12            
+# of nodes: 10
+# of connected components: 1
+
+M = 12 - 10 + 2(1) = 4
