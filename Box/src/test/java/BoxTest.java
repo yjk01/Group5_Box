@@ -2,6 +2,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import org.junit.*;
 
+import jdk.jfr.Timestamp;
+
 /**
  *     Group 5
  *     Box Test Cases
@@ -233,5 +235,198 @@ public class BoxTest
             System.out.println("Fix Horizonatal lines");
     }
 
+    // Test if all 4 lines of a box connect to each other
+    @Test
+    public void UnitTest8()
+    {
+        System.out.println();
 
+        String str = "M20 10.0 v-5.0 h20.0 v5.0 h-20.0";
+        String[] spt = str.split(" ",0);
+        String s;
+
+        double arr[] = new double[10];  // horizontal
+        double arr1[] = new double[10]; // vertical
+
+        for(int i = 0; i < spt.length; i++)
+        {
+            if(spt[i].charAt(0) == 'h')
+            {
+                s = spt[i].replace("h", "");
+
+                arr[i] = Double.parseDouble(s);
+            }
+        }
+
+        for(int i = 0; i < spt.length; i++)
+        {
+            if(spt[i].charAt(0) == 'v')
+            {
+                s = spt[i].replace("v", "");
+
+                arr1[i] = Double.parseDouble(s);
+            }
+        }
+
+        double hsum = 0, vsum = 0;
+
+        for(int i = 0; i < arr.length; i++)
+            hsum += arr[i];
+        
+        for(int i = 0; i < arr.length; i++)
+            vsum += arr1[i];
+        
+        if(hsum == 0 && vsum == 0)
+            System.out.println("All lines connect to reach other");
+
+        else
+            System.out.println("Check coordinates?");
+    }
+
+    @Test
+    public void UnitTest9()
+    {
+        System.out.println();
+
+        String str = "M20 10.0 v10.0 h20.0 v-10.0 h-20.0";
+        String[] spt = str.split(" ",0);
+        String s;
+
+        double arr[] = new double[10];  // horizontal
+        double arr1[] = new double[10]; // vertical
+
+        for(int i = 0; i < spt.length; i++)
+        {
+            if(spt[i].charAt(0) == 'h')
+            {
+                s = spt[i].replace("h", "");
+
+                arr[i] = Double.parseDouble(s);
+            }
+        }
+
+        for(int i = 0; i < spt.length; i++)
+        {
+            if(spt[i].charAt(0) == 'v')
+            {
+                s = spt[i].replace("v", "");
+
+                arr1[i] = Double.parseDouble(s);
+            }
+        }
+
+        double hsum = 0, vsum = 0;
+
+        for(int i = 0; i < arr.length; i++)
+            hsum += arr[i];
+        
+        for(int i = 0; i < arr.length; i++)
+            vsum += arr1[i];
+        
+        if(hsum == 0 && vsum == 0)
+            System.out.println("All lines connect to reach other");
+
+        else
+            System.out.println("Check coordinates?");
+
+    }
+
+    @Test
+    public void UnitTest10()
+    {
+        try
+        {
+            String str = "M20 10 v-5.0 h20.0 v5.0 h-20.0";
+            String[] spt = str.split(" ",0);
+            String s;
+    
+            double arr[] = new double[10];  // horizontal
+    
+            for(int i = 0; i < spt.length; i++)
+            {
+                if(spt[i].charAt(0) == 'h')
+                {
+                    s = spt[i].replace("h", "");
+    
+                    arr[i] = Double.parseDouble(s);
+                }
+            }
+            
+            double sum = 0;
+
+            for(int i = 0; i < arr.length; i++)
+                sum += arr[i];
+        
+            assertEquals(20.0 - 20.0,sum,0.0001);
+        }
+
+        catch(Exception e)
+        {
+            System.out.println("Horizontal lines don't align");
+        }
+    }
+
+    @Test
+    public void UnitTest11()
+    {
+        try
+        {
+            String str = "M20 10 v-5.0 h20.0 v5.0 h-20.0";
+            String[] spt = str.split(" ",0);
+            String s;
+    
+            double arr[] = new double[10];  // vertical
+    
+            for(int i = 0; i < spt.length; i++)
+            {
+                if(spt[i].charAt(0) == 'v')
+                {
+                    s = spt[i].replace("v", "");
+    
+                    arr[i] = Double.parseDouble(s);
+                }
+            }
+            
+            double sum = 0;
+
+            for(int i = 0; i < arr.length; i++)
+                sum += arr[i];
+        
+            assertEquals(-5.0 + 5,sum,0.0001);
+        }
+
+        catch(Exception e)
+        {
+            System.out.println("Vertical lines don't align");
+        }
+    }
+
+    // test if box has correct amount of lines
+    @Test
+    public void UnitTest12()
+    {
+        String str = "M20 10 v-5.0 h20.0 v5.0 h-20.0";
+        
+        int hcnt = 0, vcnt = 0;
+
+        for(int i = 0; i < str.length(); i++)
+        {
+            if(str.charAt(i) == 'h')
+                hcnt++;
+            
+            if(str.charAt(i) == 'v')
+                vcnt++;
+
+        }
+
+        if(hcnt < 2)
+            System.out.println("Horizontal line missing");
+        else if(hcnt > 2)
+            System.out.println("Too many horizontal lines");
+        
+        if(vcnt < 2)
+            System.out.println("Vertical line missing");
+        else if(vcnt > 2)
+            System.out.println("Too many vertical lines");
+    }
 }
