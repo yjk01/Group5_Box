@@ -429,4 +429,271 @@ public class BoxTest
         else if(vcnt > 2)
             System.out.println("Too many vertical lines");
     }
+    
+    @Test
+    public void UnitTest13()
+    {
+        String str = "M20 10 v-5.0 h20.0 v5.0 h-20.0";
+        String[] spt = str.split(" ", 0);
+        String s;
+
+        double ht[] = new double[2];
+        double wt[] = new double[2];
+        double mo[] = new double[2];
+
+        double height = 100, width = 100;
+        int hc = 0, wc = 0, mc = 0; // count appearance of height and width values
+
+        for(int i = 0; i < spt.length; i++)
+        {
+            if(spt[i].charAt(0) == 'h')
+            {
+                s = spt[i].replace("h","");
+
+                ht[hc] = Double.parseDouble(s);
+                hc++;
+            }
+
+            else if(spt[i].charAt(0) == 'v')
+            {
+                s = spt[i].replace("v","");
+
+                wt[wc] = Double.parseDouble(s);
+                wc++;
+            }
+        }
+        
+        String move;
+        move = spt[0].replace("M","");
+
+        mo[0] = Double.parseDouble(move);
+        mo[1] = Double.parseDouble(spt[1]);
+
+        boolean check = true;
+
+        for(int i = 0; i < ht.length; i++)
+        {
+            if((mo[1] + ht[i]) > height)
+                check = false;
+        }
+
+        if(check == true)
+            System.out.println("Height of the box does not exceed the canvas's height");
+        else
+            System.out.println("Box is too high");
+    }
+
+    @Test
+    public void UnitTest14()
+    {
+        String str = "M20 10 v-5.0 h20.0 v5.0 h-20.0";
+        String[] spt = str.split(" ", 0);
+        String s;
+
+        double ht[] = new double[2];
+        double wt[] = new double[2];
+        double mo[] = new double[2];
+
+        double height = 100, width = 100;
+        int hc = 0, wc = 0, mc = 0; // count appearance of height and width values
+
+        for(int i = 0; i < spt.length; i++)
+        {
+            if(spt[i].charAt(0) == 'h')
+            {
+                s = spt[i].replace("h","");
+
+                ht[hc] = Double.parseDouble(s);
+                hc++;
+            }
+
+            else if(spt[i].charAt(0) == 'v')
+            {
+                s = spt[i].replace("v","");
+
+                wt[wc] = Double.parseDouble(s);
+                wc++;
+            }
+        }
+        
+        String move;
+        move = spt[0].replace("M","");
+
+        mo[0] = Double.parseDouble(move);
+        mo[1] = Double.parseDouble(spt[1]);
+
+        boolean check = true;
+
+        if(mo[1] + (ht[1] * -1) > height)
+            check = false;
+        // for(int i = 0; i < ht.length; i++)
+        // {
+        //     if((mo[1] + ht[i]) > height)
+        //         check = false;
+        // }
+
+        if(check == true)
+            System.out.println("Height of the box does not exceed the canvas's height");
+        else
+            System.out.println("Box is too high");
+    }
+
+    @Test
+    public void UnitTest15()
+    {
+        String str = "M20 10 v-5.0 h20.0 v5.0 h-20.0";
+        String[] spt = str.split(" ", 0);
+        String s;
+
+        double ht[] = new double[2];
+        double wt[] = new double[2];
+        double mo[] = new double[2];
+
+        double height = 100, width = 100;
+        int hc = 0, wc = 0, mc = 0; // count appearance of height and width values
+
+        for(int i = 0; i < spt.length; i++)
+        {
+            if(spt[i].charAt(0) == 'h')
+            {
+                s = spt[i].replace("h","");
+
+                ht[hc] = Double.parseDouble(s);
+                hc++;
+            }
+
+            else if(spt[i].charAt(0) == 'v')
+            {
+                s = spt[i].replace("v","");
+
+                wt[wc] = Double.parseDouble(s);
+                wc++;
+            }
+        }
+        
+        String move;
+        move = spt[0].replace("M","");
+
+        mo[0] = Double.parseDouble(move);
+        mo[1] = Double.parseDouble(spt[1]);
+
+        boolean check = true;
+
+        for(int i = 0; i < ht.length; i++)
+        {
+            if((mo[0] + wt[0] * -1) > width)
+                check = false;
+        }
+
+        if(check == true)
+            System.out.println("Width of the box does not exceed the canvas's width");
+        else
+            System.out.println("Box is too FAT");
+    }
+    @Test
+    public void UnitTest16()
+    {
+        String str = "M20 10 v-5.0 h20.0 v5.0 h-20.0";
+        String[] spt = str.split(" ", 0);
+        String s;
+
+        double ht[] = new double[2];
+        double wt[] = new double[2];
+        double mo[] = new double[2];
+
+        double height = 100, width = 100;
+        int hc = 0, wc = 0, mc = 0; // count appearance of height and width values
+
+        for(int i = 0; i < spt.length; i++)
+        {
+            if(spt[i].charAt(0) == 'h')
+            {
+                s = spt[i].replace("h","");
+
+                ht[hc] = Double.parseDouble(s);
+                hc++;
+            }
+
+            else if(spt[i].charAt(0) == 'v')
+            {
+                s = spt[i].replace("v","");
+
+                wt[wc] = Double.parseDouble(s);
+                wc++;
+            }
+        }
+        
+        String move;
+        move = spt[0].replace("M","");
+
+        mo[0] = Double.parseDouble(move);
+        mo[1] = Double.parseDouble(spt[1]);
+
+        boolean check = true;
+
+        for(int i = 0; i < ht.length; i++)
+        {
+            if((mo[1] + wt[i]) > height)
+                check = false;
+        }
+
+        if(check == true)
+            System.out.println("Width of the box does not exceed the canvas's width");
+        else
+            System.out.println("Box is too FAT");
+    }
+
+    @Test
+    public void UnitTest17()
+    {
+        String str = "M20 10 v-5.0 h20.0 v5.0 h-20.0";
+        String[] spt = str.split(" ", 0);
+        String s;
+
+        double ht[] = new double[2];
+        double wt[] = new double[2];
+        double mo[] = new double[2];
+
+        double height = 100, width = 100;
+        int hc = 0, wc = 0, mc = 0; // count appearance of height and width values
+
+        for(int i = 0; i < spt.length; i++)
+        {
+            if(spt[i].charAt(0) == 'h')
+            {
+                s = spt[i].replace("h","");
+
+                ht[hc] = Double.parseDouble(s);
+                hc++;
+            }
+
+            else if(spt[i].charAt(0) == 'v')
+            {
+                s = spt[i].replace("v","");
+
+                wt[wc] = Double.parseDouble(s);
+                wc++;
+            }
+        }
+        
+        String move;
+        move = spt[0].replace("M","");
+
+        mo[0] = Double.parseDouble(move);
+        mo[1] = Double.parseDouble(spt[1]);
+
+        boolean check = true;
+        double area = 0;
+
+        area = Math.abs(ht[0] * Math.abs(wt[0]));
+        
+        if(area > height * width)
+            check = false;
+
+        if(check == true)
+            System.out.println("Area of one side does not exceed the area of the canvas");
+        else
+            System.out.println("TOO BIG");
+    }
+
 }
