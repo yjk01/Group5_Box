@@ -1,9 +1,13 @@
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Box 
 {
+
+	public static double height, length, width;
+
 	public String box1()
 	{
 		return "M 20.0 10.0 v-5.0 h20.0 v5.0 h-20.0";
@@ -59,6 +63,25 @@ public class Box
       		e.printStackTrace();
     	}
 	}
+
+	// User input
+	public static void userInput() {
+
+		System.out.println("JUJUM BOX MAKING\nPlease enter the box dimension in order of height, length, width.\n");
+
+		Scanner scan = new Scanner(System.in); // creates scanner
+
+		System.out.println("Enter height: ");
+		height = scan.nextDouble();
+		System.out.println("Enter length: ");
+		length = scan.nextDouble();
+		System.out.println("Enter width: ");
+		width = scan.nextDouble();
+
+		System.out.println(height + " " + length + " " + width);
+
+	}
+
 	
     public static void main( String[] args )
     {
@@ -70,6 +93,8 @@ public class Box
 		System.out.println("Box 6: M 45.0 10.0 h20.0 v10.0 h-20.0");
 
 		makeSVG();
+		userInput();
+
     }
 	
 }
