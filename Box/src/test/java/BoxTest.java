@@ -696,4 +696,163 @@ public class BoxTest
             System.out.println("TOO BIG");
     }
 
+    @Test
+    public void UnitTest18()
+    {
+        String str = "M20 10 v-5.0 h20.0 v5.0 h-20.0";
+        String[] spt = str.split(" ", 0);
+        String s; 
+
+        double ht[] = new double[2];
+        double wt[] = new double[2];
+        double mo[] = new double[2];
+
+        double height = 100, width = 100;
+        int hc = 0, wc = 0, mc = 0; // count appearance of height and width values
+
+        for(int i = 0; i < spt.length; i++)
+        {
+            if(spt[i].charAt(0) == 'h')
+            {
+                s = spt[i].replace("h","");
+
+                ht[hc] = Double.parseDouble(s);
+                
+                if(ht[hc] < 0)
+                    System.out.println("Cannot have negatives.");
+                else
+                    hc++; 
+            }
+
+            else if(spt[i].charAt(0) == 'v')
+            {
+                s = spt[i].replace("v","");
+
+                wt[wc] = Double.parseDouble(s);
+                
+                if(wt[wc] < 0)
+                    System.out.println("Cannot have negatives.");
+                else
+                    wc++;            
+            }
+        }
+
+    }
+
+    @Test
+    public void UnitTest19()
+    {
+        String str = "M20 10 v-5.0 h20.0 v5.0 h-20.0";
+        String[] spt = str.split(" ", 0);
+        String s;
+
+        double ht[] = new double[2];
+        double wt[] = new double[2];
+        double mo[] = new double[2];
+
+        double height = 100, width = 100;
+        int hc = 0, wc = 0, mc = 0; // count appearance of height and width values
+
+        for(int i = 0; i < spt.length; i++)
+        {
+            if(spt[i].charAt(0) == 'h')
+            {
+                s = spt[i].replace("h","");
+
+                ht[hc] = Double.parseDouble(s);
+
+                if(ht[hc] > 100)
+                    System.out.println("Out of Bounds");
+                else
+                    hc++;
+            }
+        }
+    }
+
+    @Test
+    public void UnitTest20()
+    {
+        String str = "M20 10 v-5.0 h20.0 v5.0 h-20.0";
+        String[] spt = str.split(" ", 0);
+        String s;
+
+        double ht[] = new double[2];
+        double wt[] = new double[2];
+        double mo[] = new double[2];
+
+        double height = 100, width = 100;
+        int hc = 0, wc = 0, mc = 0; // count appearance of height and width values
+
+        for(int i = 0; i < spt.length; i++)
+        {
+            if(spt[i].charAt(0) == 'v')
+            {
+                s = spt[i].replace("v","");
+
+                wt[wc] = Double.parseDouble(s);
+                
+                if(wt[wc] > 100)
+                    System.out.println("Out of Bounds");
+                else
+                    wc++;            
+            }
+        }
+    }
+
+    @Test
+    public void UnitTest21()
+    {
+        String str = "M20 10 v-5.0 h20.0 v5.0 h-20.0";
+        String[] spt = str.split(" ", 0);
+        String s;
+
+        double ht[] = new double[2];
+        double wt[] = new double[2];
+        double mo[] = new double[2];
+
+        double height = 100, width = 100;
+
+        String move;
+        move = spt[0].replace("M","");
+
+        mo[0] = Double.parseDouble(move);
+        mo[1] = Double.parseDouble(spt[1]);
+
+        if(mo[0] % 1 != 0)
+            System.out.println("Cannot move by decimal");
+        if(mo[1] % 1 != 0)
+            System.out.println("Cannot move by decimal");
+    }
+
+    @Test
+    public void UnitTest22()
+    {
+        String str = "M20 10 v-5.0 h20.0 v5.0 h-20.0";
+        String[] spt = str.split(" ", 0);
+        String s;
+
+        double ht[] = new double[2];
+        double wt[] = new double[2];
+        double mo[] = new double[2];
+
+        double height = 100, width = 100;
+        int hc = 0, wc = 0, mc = 0; // count appearance of height and width values
+
+        for(int i = 0; i < spt.length; i++)
+        {
+            if(spt[i].charAt(0) == 'h')
+            {
+                System.out.println("Note that since using lowercase h, these are relative coordinates and not absolute.");
+            }
+
+            else if(spt[i].charAt(0) == 'v')
+            {
+                System.out.println("Note that since using lowercase v, these are relative coordinates and not absolute.");
+            }
+        }
+
+        if(spt[0].charAt(0) == 'm')
+            System.out.println("Note that since using lowercase m, these are relative coordinates and not absolute.");
+    }
+
 }
