@@ -12,7 +12,7 @@ public class Box
 	public static String b1 = "\"box1\"", b2 = "\"box2\"", b3 = "\"box3\"", b4 = "\"box4\"", b5 = "\"box5\"", b6 = "\"box6\"";
 	public static String svg_header = "<?xml version='1.0' encoding='us-ascii'?>\n<svg height=\"81.90mm\" viewBox=\"0.0 0.0 120.10 81.90\" width=\"120.10mm\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:cc=\"http://creativecommons.org/ns#\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:inkscape=\"http://www.inkscape.org/namespaces/inkscape\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\" xmlns:svg=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n\n";
 	public static String svg_base = "<g id = ";
-	public static String svg_tail = "/>\n</g>\n";
+	public static String svg_tail = "/>\n</g>\n</svg>";
 	public static String svg_style_path = " style=\"fill:none;stroke-linecap:round;stroke-linejoin:round;\">\n\t<path d=\"";
 
 	public String box1()
