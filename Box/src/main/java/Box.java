@@ -5,14 +5,14 @@ import java.util.Scanner;
 
 public class Box 
 {
-
-	public static double height, length, width, x = 20.0, y = 10.0;
+	public static double height, length, width, x = 10.0, y = 5.0;
 	public static String box_one, box_two, box_three, box_four, box_five, box_six, vertical, horizontal;
 	public static String move = "M ";
 	public static String b1 = "\"box1\"", b2 = "\"box2\"", b3 = "\"box3\"", b4 = "\"box4\"", b5 = "\"box5\"", b6 = "\"box6\"";
-	public static String svg_header = "<?xml version='1.0' encoding='us-ascii'?>\n<svg height=\"81.90mm\" viewBox=\"0.0 0.0 120.10 81.90\" width=\"120.10mm\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:cc=\"http://creativecommons.org/ns#\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:inkscape=\"http://www.inkscape.org/namespaces/inkscape\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\" xmlns:svg=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n\n";
+	public static String svg_header = "<?xml version='1.0' encoding='us-ascii'?>\n<svg height=\"1632px\" viewBox=\"0.0 0.0 120.10 81.90\" width=\"1056px\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:cc=\"http://creativecommons.org/ns#\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:inkscape=\"http://www.inkscape.org/namespaces/inkscape\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\" xmlns:svg=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n\n";
+	public static String svg_end = "</svg>\n";
 	public static String svg_base = "<g id = ";
-	public static String svg_tail = "/>\n</g>\n</svg>";
+	public static String svg_tail = "/>\n</g>\n\n";
 	public static String svg_style_path = " style=\"fill:none;stroke-linecap:round;stroke-linejoin:round;\">\n\t<path d=\"";
 
 	public String box1()
@@ -65,10 +65,16 @@ public class Box
 			
 			// Steps of writing SVG file
       		myWriter.write(svg_header); // writes the SVG header 
-			myWriter.write(svg_base);
-			myWriter.write(box_one);
 
-			
+			myWriter.write(box_one);
+			myWriter.write(box_two);
+			myWriter.write(box_three);
+			myWriter.write(box_four);
+			myWriter.write(box_five);
+			myWriter.write(box_six);
+
+			// end of SVG file
+			myWriter.write(svg_end);
       		myWriter.close();
       		System.out.println("Successfully wrote to the SVG file.");
     	} catch (IOException e) {
@@ -100,11 +106,27 @@ public class Box
 		String neg_vertical = Double.toString((height * -1));
 		String pos_horizontal = Double.toString(length);
 		String neg_horizontal = Double.toString((length * -1));
-		
+		String pos_width = Double.toString(width);
+		String neg_width = Double.toString((width * -1));
+		double reset_y, reset_y2; // have to reset y everytime to shift parts down so they dont overlap
+		double reset_x;
 
-		box_one = b1 + svg_style_path + "M " + Double.toString(x) + " " + Double.toString(y) + " v" + neg_vertical + " h" + pos_horizontal + " v" + pos_vertical + " h" + neg_horizontal + "\"" + " stroke=\"rgb(0,0,0)\" stroke-width = \"0.20\"" + svg_tail;
+		box_one = svg_base + b1 + svg_style_path + "M " + Double.toString(x) + " " + Double.toString(y) + " v" + neg_vertical + " h" + pos_horizontal + " v" + pos_vertical + " h" + neg_horizontal + "\"" + " stroke=\"rgb(0,0,0)\" stroke-width = \"0.20\"" + svg_tail;
 
+		reset_y = y + height + 3;
+		reset_y2 = y + height + 3;
+		box_two = svg_base + b2 + svg_style_path + "M " + Double.toString(x) + " " + Double.toString(reset_y) + " v" + neg_vertical + " h" + pos_horizontal + " v" + pos_vertical + " h" + neg_horizontal + "\"" + " stroke=\"rgb(0,0,0)\" stroke-width = \"0.20\"" + svg_tail;
 
+		reset_y = reset_y + (height/2) + y;
+		box_three = svg_base + b3 + svg_style_path + "M " + Double.toString(x) + " " + Double.toString(reset_y) + " v" + neg_width + " h" + pos_horizontal + " v" + pos_width + " h" + neg_horizontal + "\"" + " stroke=\"rgb(0,0,0)\" stroke-width = \"0.20\"" + svg_tail;
+
+		reset_y = reset_y + (height/2) + y;
+		box_four = svg_base + b4 + svg_style_path + "M " + Double.toString(x) + " " + Double.toString(reset_y) + " v" + neg_width + " h" + pos_horizontal + " v" + pos_width + " h" + neg_horizontal + "\"" + " stroke=\"rgb(0,0,0)\" stroke-width = \"0.20\"" + svg_tail;
+
+		reset_x = x + length + 3; 
+		box_five = svg_base + b5 + svg_style_path + "M " + Double.toString(reset_x) + " " + Double.toString(y) + " v" + neg_width + " h" + pos_vertical + " v" + pos_width + " h" + neg_vertical + "\"" + " stroke=\"rgb(0,0,0)\" stroke-width = \"0.20\"" + svg_tail;
+
+		box_six = svg_base + b6 + svg_style_path + "M " + Double.toString(reset_x) + " " + Double.toString(reset_y2) + " v" + neg_width + " h" + pos_vertical + " v" + pos_width + " h" + neg_vertical + "\"" + " stroke=\"rgb(0,0,0)\" stroke-width = \"0.20\"" + svg_tail;
 	}
 	
     public static void main( String[] args )

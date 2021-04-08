@@ -1,7 +1,28 @@
 <?xml version='1.0' encoding='us-ascii'?>
-<svg height="81.90mm" viewBox="0.0 0.0 120.10 81.90" width="120.10mm" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg height="1632px" viewBox="0.0 0.0 120.10 81.90" width="1056px" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
 <g id = "box1" style="fill:none;stroke-linecap:round;stroke-linejoin:round;">
-	<path d="M 20.0 10.0 v-2.0 h3.0 v2.0 h-3.0" stroke="rgb(0,0,0)" stroke-width = "0.20"/>
+	<path d="M 10.0 5.0 v-10.0 h20.0 v10.0 h-20.0" stroke="rgb(0,0,0)" stroke-width = "0.20"/>
 </g>
+
+<g id = "box2" style="fill:none;stroke-linecap:round;stroke-linejoin:round;">
+	<path d="M 10.0 18.0 v-10.0 h20.0 v10.0 h-20.0" stroke="rgb(0,0,0)" stroke-width = "0.20"/>
+</g>
+
+<g id = "box3" style="fill:none;stroke-linecap:round;stroke-linejoin:round;">
+	<path d="M 10.0 28.0 v-7.5 h20.0 v7.5 h-20.0" stroke="rgb(0,0,0)" stroke-width = "0.20"/>
+</g>
+
+<g id = "box4" style="fill:none;stroke-linecap:round;stroke-linejoin:round;">
+	<path d="M 10.0 38.0 v-7.5 h20.0 v7.5 h-20.0" stroke="rgb(0,0,0)" stroke-width = "0.20"/>
+</g>
+
+<g id = "box5" style="fill:none;stroke-linecap:round;stroke-linejoin:round;">
+	<path d="M 33.0 5.0 v-7.5 h10.0 v7.5 h-10.0" stroke="rgb(0,0,0)" stroke-width = "0.20"/>
+</g>
+
+<g id = "box6" style="fill:none;stroke-linecap:round;stroke-linejoin:round;">
+	<path d="M 33.0 18.0 v-7.5 h10.0 v7.5 h-10.0" stroke="rgb(0,0,0)" stroke-width = "0.20"/>
+</g>
+
 </svg>
