@@ -1,0 +1,8 @@
+-- laser-thickness = 0.001 pts = 1.388e^-5 in.
+-- SO... hypothetically, laser thickness doesn't matter. Foamboard burns more than actually plywood.
+-- white foamboard thickness = 1/4 in.
+-- Top, Bottom = inward only
+-- front, back = both end sides have to be (tab length) - (thickness of material) we're using
+    -- ex) if material = 1/4 thick, 5x5x5 box, tab length = 1 in., both ends of front and back squares has to be 1 in. - 1/4 in.  = 3/4 in.
+-- any usesful formula to get tab length? maybe limit number of tabs to 2 or 3?
+-- or use certain percentage to determine number of tabs?
