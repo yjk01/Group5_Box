@@ -1,0 +1,17 @@
+<Not started>
+- Implimentation of an actually phone stand
+
+<In progress>
+- Algorithm for tabs
+- Spacing of 6 sides
+- Getting exact location of each point, line, and sides
+
+<Ready for Test>
+- File creation
+- User input
+- Formation of 6 sides
+- Svg code of each side
+
+<Done>
+- File creation
+- Input control
