@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Box 
 {
-	public static double height, length, width, x = 1.0, y = 3.0;
+	public static double height, length, width, x = 1.0, y = 1.0;
 	public static String box_one, box_two, box_three, box_four, box_five, box_six, vertical, horizontal;
 	public static String move = "M ";
 	public static String b1 = "\"box1\"", b2 = "\"box2\"", b3 = "\"box3\"", b4 = "\"box4\"", b5 = "\"box5\"", b6 = "\"box6\"";
@@ -13,7 +13,7 @@ public class Box
 	public static String svg_end = "</svg>\n";
 	public static String svg_base = "<g id = ";
 	public static String svg_tail = "/>\n</g>\n\n";
-	public static String svg_style_path = " style=\"fill:none;stroke-linecap:round;stroke-linejoin:round;\">\n\t<path d=\"";
+	public static String svg_style_path = " style=\"fill:none;stroke-linecap:round;stroke-linejoin:straight;\">\n\t<path d=\"";
 
 	public String box1()
 	{
@@ -115,26 +115,26 @@ public class Box
 		double reset_y, reset_y2, reset_y3, reset_y4; // have to reset y everytime to shift parts down so they dont overlap
 		double reset_x;
 
-		box_one = svg_base + b1 + svg_style_path + "M " + Double.toString(x) + " " + Double.toString(y) + " v" + neg_vertical + " h" + pos_horizontal + " v" + pos_vertical + " h" + neg_horizontal + "\"" + " stroke=\"rgb(0,0,0)\" stroke-width = \"0.10\"" + svg_tail;
+		box_one = svg_base + b1 + svg_style_path + "M " + Double.toString(x) + " " + Double.toString(y) + " v" + pos_vertical + " h" + pos_horizontal + " v" + neg_vertical + " h" + neg_horizontal + "\"" + " stroke=\"rgb(0,0,0)\" stroke-width = \"0.10\"" + svg_tail;
 
 		reset_y = (y + height + 0.5);
 
-		box_two = svg_base + b2 + svg_style_path + "M " + Double.toString(x) + " " + Double.toString(reset_y) + " v" + neg_vertical + " h" + pos_horizontal + " v" + pos_vertical + " h" + neg_horizontal + "\"" + " stroke=\"rgb(0,0,0)\" stroke-width = \"0.10\"" + svg_tail;
+		box_two = svg_base + b2 + svg_style_path + "M " + Double.toString(x) + " " + Double.toString(reset_y) + " v" + pos_vertical + " h" + pos_horizontal + " v" + neg_vertical + " h" + neg_horizontal + "\"" + " stroke=\"rgb(0,0,0)\" stroke-width = \"0.10\"" + svg_tail;
 		
 		//reset_y2 = (reset_y + height + 0.5);
 		//reset_y = (reset_y + (height/2) + y);
 		reset_y2 = reset_y * 1.8;
-		box_three = svg_base + b3 + svg_style_path + "M " + Double.toString(x) + " " + Double.toString(reset_y2) + " v" + neg_width + " h" + pos_horizontal + " v" + pos_width + " h" + neg_horizontal + "\"" + " stroke=\"rgb(0,0,0)\" stroke-width = \"0.10\"" + svg_tail;
+		box_three = svg_base + b3 + svg_style_path + "M " + Double.toString(x) + " " + Double.toString(reset_y2) + " v" + pos_width + " h" + pos_horizontal + " v" + neg_width + " h" + neg_horizontal + "\"" + " stroke=\"rgb(0,0,0)\" stroke-width = \"0.10\"" + svg_tail;
 
 		// reset_y3 = reset_y2 +width+ 0.5;
 		reset_y3 = reset_y2 * 1.2;
-		box_four = svg_base + b4 + svg_style_path + "M " + Double.toString(x) + " " + Double.toString(reset_y3) + " v" + neg_width + " h" + pos_horizontal + " v" + pos_width + " h" + neg_horizontal + "\"" + " stroke=\"rgb(0,0,0)\" stroke-width = \"0.10\"" + svg_tail;
+		box_four = svg_base + b4 + svg_style_path + "M " + Double.toString(x) + " " + Double.toString(reset_y3) + " v" + pos_width + " h" + pos_horizontal + " v" + neg_width + " h" + neg_horizontal + "\"" + " stroke=\"rgb(0,0,0)\" stroke-width = \"0.10\"" + svg_tail;
 
 		reset_x = (x + length + 1.5); 
-		box_five = svg_base + b5 + svg_style_path + "M " + Double.toString(reset_x) + " " + Double.toString(y) + " v" + neg_width + " h" + pos_vertical + " v" + pos_width + " h" + neg_vertical + "\"" + " stroke=\"rgb(0,0,0)\" stroke-width = \"0.10\"" + svg_tail;
+		box_five = svg_base + b5 + svg_style_path + "M " + Double.toString(reset_x) + " " + Double.toString(y) + " v" + pos_width + " h" + pos_vertical + " v" + neg_width + " h" + neg_vertical + "\"" + " stroke=\"rgb(0,0,0)\" stroke-width = \"0.10\"" + svg_tail;
 
 		reset_y4 = y + width + 0.5;
-		box_six = svg_base + b6 + svg_style_path + "M " + Double.toString(reset_x) + " " + Double.toString(reset_y4) + " v" + neg_width + " h" + pos_vertical + " v" + pos_width + " h" + neg_vertical + "\"" + " stroke=\"rgb(0,0,0)\" stroke-width = \"0.10\"" + svg_tail;
+		box_six = svg_base + b6 + svg_style_path + "M " + Double.toString(reset_x) + " " + Double.toString(reset_y4) + " v" + pos_width + " h" + pos_vertical + " v" + neg_width + " h" + neg_vertical + "\"" + " stroke=\"rgb(0,0,0)\" stroke-width = \"0.10\"" + svg_tail;
 	}
 	
     public static void main( String[] args )
