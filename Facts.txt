@@ -6,3 +6,7 @@
     -- ex) if material = 1/4 thick, 5x5x5 box, tab length = 1 in., both ends of front and back squares has to be 1 in. - 1/4 in.  = 3/4 in.
 -- any usesful formula to get tab length? maybe limit number of tabs to 2 or 3?
 -- or use certain percentage to determine number of tabs?
+
+new late discoveries
+-- lines that meet have some issue with smooth connection
+-- they don't completely overlap
