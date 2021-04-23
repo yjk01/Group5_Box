@@ -1062,4 +1062,167 @@ public class BoxTest
         else
             System.out.println("Tabs won't fit");
     }    
+
+    // Tab Tests ------------------------------------------
+    @Test
+    public void UnitTest28() {
+        String tab1 = "h1.2 v0.25 h1.2 v-0.25 h1.2 v0.25 h1.2 v-0.25 h1.2";
+        String opp_tab1 = "h-1.2 v-0.25 h-1.2 v0.25 h-1.2 v-0.25 h-1.2 v0.25 h-1.2";
+        String[] split1 = tab1.split(" ", 0);
+        String[] split2 = tab1.split(" ", 0);
+        String val1, val2;
+
+        boolean isOpposite = true;
+
+        for(int i = 0; i < split1.length; i++) {
+            if(split1[i].charAt(0) == 'h' && split2[i].charAt(0) == 'h') {
+                val1 = split1[i].replace("h", "");
+                val2 = split2[i].replace("h", "");
+
+                if(Double.parseDouble(val1) != (Double.parseDouble(val2) * -1))
+                    isOpposite = false;
+            }
+            if(split1[i].charAt(0) == 'v' && split2[i].charAt(0) == 'v') {
+                val1 = split1[i].replace("v", "");
+                val2 = split2[i].replace("v", "");
+
+                if(Double.parseDouble(val1) != (Double.parseDouble(val2) * -1))
+                    isOpposite = false;
+            }
+        }
+        if(isOpposite == true)
+            System.out.println("Tab has a unifying opposite side.");
+        else
+            System.out.println("Tab does not have a unifying opposite side.");
+
+    }
+
+    @Test
+    public void UnitTest29() {
+        String tab2 = "v1.4 h-0.25 v1.4 h0.25 v1.4 h-0.25 v1.4 h0.25 v1.4 ";
+        String opp_tab2 = "v-1.4 h0.25 v-1.4 h-0.25 v-1.4 h0.25 v-1.4 h-0.25 v-1.4";
+        String[] split1 = tab2.split(" ", 0);
+        String[] split2 = tab2.split(" ", 0);
+        String val1, val2;
+
+        boolean isOpposite = true;
+
+        for(int i = 0; i < split1.length; i++) {
+            if(split1[i].charAt(0) == 'h' && split2[i].charAt(0) == 'h') {
+                val1 = split1[i].replace("h", "");
+                val2 = split2[i].replace("h", "");
+
+                if(Double.parseDouble(val1) != (Double.parseDouble(val2) * -1))
+                    isOpposite = false;
+            }
+            if(split1[i].charAt(0) == 'v' && split2[i].charAt(0) == 'v') {
+                val1 = split1[i].replace("v", "");
+                val2 = split2[i].replace("v", "");
+
+                if(Double.parseDouble(val1) != (Double.parseDouble(val2) * -1))
+                    isOpposite = false;
+            }
+        }
+        if(isOpposite == true)
+            System.out.println("Tab has a unifying opposite side.");
+        else
+            System.out.println("Tab does not have a unifying opposite side.");
+
+    }
+
+    @Test
+    public void UnitTest30() {
+        String tab3 = "h-1.2 v-0.25 h-1.2 v0.25 h-1.2 v-0.25 h-1.2 v0.25 h-1.2";
+        String[] split = tab3.split(" ", 0);
+        String val1, val2;
+        int count = 0;
+        double num1 = 0, num2 = 0;
+
+        for(int i = 0; i < split.length; i++) {
+            if(split[i].charAt(0) == 'v') {
+                if(count == 0 || count == 2) {
+                    val1 = split[i].replace("v", "");
+                    num1 = Double.parseDouble(val1); 
+                }
+                else if(count == 1 || count == 3) {
+                    val2 = split[i].replace("v", "");
+                    num2 = Double.parseDouble(val2);
+                }
+            }
+            if(count == 1 || count == 3) {
+                if(num1 < 0)
+                    num1 *= -1;
+                if(num2 < 0)
+                    num2 *= -1;
+
+                if(num1 != num2)
+                    System.out.println("Tab made successfully.");
+                else
+                    System.out.println("Tab NOT made successfully.");
+            }
+            count++;
+        }
+    }
+
+    @Test
+    public void UnitTest31() {
+        String tab4 = "v-1.4 h0.25 v-1.4 h-0.25 v-1.4 h0.25 v-1.4 h-0.25 v-1.4";
+        String[] split = tab4.split(" ", 0);
+        String val1, val2;
+        int count = 0;
+        double num1 = 0, num2 = 0;
+
+        for(int i = 0; i < split.length; i++) {
+            if(split[i].charAt(0) == 'v') {
+                if(count == 0 || count == 2) {
+                    val1 = split[i].replace("v", "");
+                    num1 = Double.parseDouble(val1); 
+                }
+                else if(count == 1 || count == 3) {
+                    val2 = split[i].replace("v", "");
+                    num2 = Double.parseDouble(val2);
+                }
+            }
+            if(count == 1 || count == 3) {
+                if(num1 < 0)
+                    num1 *= -1;
+                if(num2 < 0)
+                    num2 *= -1;
+
+                if(num1 != num2)
+                    System.out.println("Tab made successfully.");
+                else
+                    System.out.println("Tab NOT made successfully.");
+            }
+            count++;
+        }
+
+    }
+
+    @Test
+    public void UnitTest32() {
+        String tab5 = "h0.95 v-0.25 h1.2 v0.25 h1.2 v-0.25 h1.2 v0.25 h0.95";
+        String[] split = tab5.split(" ", 0);
+        String temp;
+        int count = 0;
+
+        boolean goodDesign = true;
+        
+        for(int i = 0; i < split.length; i++) {
+            if(split[i].charAt(0) == 'h') {
+                count++;
+            }
+            else if(split[i].charAt(0) == 'v') {
+                count++;
+            }
+            else 
+                goodDesign = false;
+        }
+
+        if(count == 9)
+            System.out.println("The svg makes a proper side with tabs.");
+        else
+            System.out.println("The svg does not make a side with the proper tabs.");
+
+    }
 }
