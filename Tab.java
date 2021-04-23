@@ -10,6 +10,7 @@ public class Tab
 
     public static String f1 = "";   // string that'll hold the svg code for face 1
     public static String f2 = "";
+    public static String f3 = "";
     public static double x,y,z;     // dimensions of the box
     public static double thick = 0; // hold thickness of material used
 
@@ -252,7 +253,113 @@ public class Tab
             }
         }    
 
-        System.out.println(f2);
+        System.out.println(f2 + "\n");
+
+        // --------------- face 3 --------------------
+        down = true;
+
+        // top line
+        for(int i = 0; i < 9; i++)
+        {
+            if(i % 2 == 0)
+            {
+                f3 += "h" + Double.toString(nz) + " ";
+            }
+            
+            else if(i % 2 == 1 && down == false)
+            {
+                f3 += "v" + Double.toString(thick) + " ";
+                down = !down;
+            }
+
+            else if(i % 2 == 1 && down == true)
+            {
+                f3 += "v" + Double.toString(thick * -1) + " ";
+                down = !down;
+            }
+        }
+
+        f3 += "\n";
+
+        // right
+        for(int i = 0; i < 9; i++)
+        {
+            if( i % 2 == 0 && (i == 0 || i == 8))
+            {
+                f3 += "v" + Double.toString(ny - thick) + " ";
+            }
+
+            else if(i % 2 == 0 && (i != 0 || i != 8))
+            {
+                f3 += "v" + Double.toString(ny) + " ";
+            }
+            else if(i % 2 == 1 && down == true)
+            {
+                f3 += "h" + Double.toString(thick * -1) + " ";
+                down = !down;
+            }
+
+            else if(i % 2 == 1 && down == false)
+            {
+                f3 += "h" + Double.toString(thick) + " ";
+                down = !down;
+            }
+        }
+
+        f3 += "\n";
+
+        down = !down;
+
+        // bottom line
+        for(int i = 0; i < 9; i++)
+        {
+            if(i % 2 == 0)
+            {
+                f3 += "h" + Double.toString(nz * -1) + " ";
+            }
+            
+            else if(i % 2 == 1 && down == false)
+            {
+                f3 += "v" + Double.toString(thick) + " ";
+                down = !down;
+            }
+
+            else if(i % 2 == 1 && down == true)
+            {
+                f3 += "v" + Double.toString(thick * -1) + " ";
+                down = !down;
+            }
+        }
+
+        f3 += "\n";
+        
+        // left line
+        for(int i = 0; i < 9; i++)
+        {
+            if( i % 2 == 0 && (i == 0 || i == 8))
+            {
+                f3 += "v" + Double.toString((ny - thick) * -1) + " ";
+            }
+
+            else if(i % 2 == 0 && (i != 0 || i != 8))
+            {
+                f3 += "v" + Double.toString(ny * -1) + " ";
+            }
+            else if(i % 2 == 1 && down == true)
+            {
+                f3 += "h" + Double.toString(thick * -1) + " ";
+                down = !down;
+            }
+
+            else if(i % 2 == 1 && down == false)
+            {
+                f3 += "h" + Double.toString(thick) + " ";
+                down = !down;
+            }
+        }
+
+
+        System.out.println(f3);
     }
 
     public static void main(String[] args)

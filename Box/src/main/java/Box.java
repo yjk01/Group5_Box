@@ -22,38 +22,6 @@ public class Box
 	public static String svg_style_path = " style=\"fill:none;stroke-linecap:round;stroke-linejoin:straight;\">\n\t<path d=\"";
 	public static String stroke = "\" stroke=\"rgb(0,0,0)\" stroke-width=\"0.01\"";
 
-/*
-	public String box1()
-	{
-		return "M 20.0 10.0 v-5.0 h20.0 v5.0 h-20.0";
-	}
-
-	public String box2()
-	{
-		return "M 20.0 10.0 v10.0 h20.0 v-10.0";
-	}
-
-	public String box3()
-	{
-		return "M 20.0 10.0 h-5.0 v10.0 h5.0";
-	}
-
-	public String box4()
-    {
-        return "M 20.0 20.0 v5.0 h20.0 v-5.0";
-    }
-
-    public String box5()
-    {
-        return "M 40.0 10.0 h5.0 v10 h-5.0";
-    }
-
-    public String box6()
-    {
-        return "M 45.0 10.0 h20.0 v10.0 h-20.0";
-    }
-*/
-
 	public static void makeSVGFile() {
 		// Make File
 		try 
@@ -75,7 +43,7 @@ public class Box
 
 		// Write to file
 		try {
-      		FileWriter myWriter = new FileWriter("Box5.svg");
+      		FileWriter myWriter = new FileWriter("Box7.svg");
 			
 			// Steps of writing SVG file
       		myWriter.write(svg_header); // writes the SVG header 
@@ -83,8 +51,8 @@ public class Box
 			myWriter.write(box_two);
 			myWriter.write(box_three);
 			myWriter.write(box_four);
-//			myWriter.write(box_five);
-//			myWriter.write(box_six);
+			myWriter.write(box_five);
+			myWriter.write(box_six);
 
 			// end of SVG file
 			myWriter.write(svg_end);
@@ -106,7 +74,7 @@ public class Box
 	{
 		System.out.println("JUJUM BOX MAKING\nPlease enter the box dimensions in order of height, length, width.\n");
 
-		Scanner scan = new Scanner(System.in); // creates scanner
+		Scanner scan = new Scanner(System.in);
 
 		System.out.print("Enter height: ");
 		height = scan.nextDouble();
@@ -129,6 +97,7 @@ public class Box
         boolean down = false;          // checks if line started to draw down / up
         boolean side = false;          // check if line started to drawn left / right
 
+		// initialize variables to avoid "null" from printing in the svg code
 		f1 = f2 = f3 =  "";
 		box_two = box_three = box_four = box_five = box_six = "";
 
@@ -136,7 +105,9 @@ public class Box
         ny = height / 5;
         nz = width / 5;
         
-        // for loop that generates the top line for face 1
+		// ---------------------------------- Face One ------------------------------------------------------------
+        
+		//  top line
         for(int i = 0; i < 9; i++)
         {
             if(i % 2 == 0)
@@ -161,7 +132,7 @@ public class Box
 
         down = !down;
         
-        // for loop that generates the right line for face 1
+        // right line
         for(int i = 0; i < 9; i++)
         {
             if(i % 2 == 0)
@@ -184,7 +155,7 @@ public class Box
 
         f1 += "\n";
 
-        // for loop that generates the bottom line for face 1
+        // bottom line
         for(int i = 0; i < 9; i++)
         {
             if(i % 2 == 0)
@@ -208,7 +179,7 @@ public class Box
         f1 += "\n";
         down = !down;
 
-        // for loop that generates the left line for face 1
+        // left line
         for(int i = 0; i < 9; i++)
         {
             if(i % 2 == 0)
@@ -229,7 +200,7 @@ public class Box
             }
         }
 
-        System.out.println(f1);
+        System.out.println(f1 + "\n");
 
 		box_one += svg_base + b1 + svg_style_path + "M " + Double.toString(x) + " " + Double.toString(y) + " ";
 		box_one += f1 + stroke + svg_tail;
@@ -351,7 +322,7 @@ public class Box
             }
         }    
 
-        System.out.println(f2);
+        System.out.println(f2 + "\n");
 
 		box_three += svg_base + b3 + svg_style_path + "M " + Double.toString(x + length + 0.5 + thick) + " " + Double.toString(y + thick) + " ";
 		box_three += f2 + stroke + svg_tail;
@@ -359,10 +330,118 @@ public class Box
 		box_four += svg_base + b4 + svg_style_path + "M " + Double.toString(x + length + 0.5 + thick) + " " + Double.toString(y + thick + height + 0.5) + " ";
 		box_four += f2 + stroke + svg_tail;
 
+        // --------------- face 3 --------------------
+        down = true;
 
+        // top line
+        for(int i = 0; i < 9; i++)
+        {
+            if(i % 2 == 0)
+            {
+                f3 += "h" + Double.toString(nz) + " ";
+            }
+            
+            else if(i % 2 == 1 && down == false)
+            {
+                f3 += "v" + Double.toString(thick) + " ";
+                down = !down;
+            }
 
-		
-	}
+            else if(i % 2 == 1 && down == true)
+            {
+                f3 += "v" + Double.toString(thick * -1) + " ";
+                down = !down;
+            }
+        }
+
+        f3 += "\n";
+
+        // right
+        for(int i = 0; i < 9; i++)
+        {
+            if( i % 2 == 0 && (i == 0 || i == 8))
+            {
+                f3 += "v" + Double.toString(ny - thick) + " ";
+            }
+
+            else if(i % 2 == 0 && (i != 0 || i != 8))
+            {
+                f3 += "v" + Double.toString(ny) + " ";
+            }
+            else if(i % 2 == 1 && down == true)
+            {
+                f3 += "h" + Double.toString(thick * -1) + " ";
+                down = !down;
+            }
+
+            else if(i % 2 == 1 && down == false)
+            {
+                f3 += "h" + Double.toString(thick) + " ";
+                down = !down;
+            }
+        }
+
+        f3 += "\n";
+
+        down = !down;
+
+        // bottom line
+        for(int i = 0; i < 9; i++)
+        {
+            if(i % 2 == 0)
+            {
+                f3 += "h" + Double.toString(nz * -1) + " ";
+            }
+            
+            else if(i % 2 == 1 && down == false)
+            {
+                f3 += "v" + Double.toString(thick) + " ";
+                down = !down;
+            }
+
+            else if(i % 2 == 1 && down == true)
+            {
+                f3 += "v" + Double.toString(thick * -1) + " ";
+                down = !down;
+            }
+        }
+
+        f3 += "\n";
+        
+        // left line
+        for(int i = 0; i < 9; i++)
+        {
+            if( i % 2 == 0 && (i == 0 || i == 8))
+            {
+                f3 += "v" + Double.toString((ny - thick) * -1) + " ";
+            }
+
+            else if(i % 2 == 0 && (i != 0 || i != 8))
+            {
+                f3 += "v" + Double.toString(ny * -1) + " ";
+            }
+            else if(i % 2 == 1 && down == true)
+            {
+                f3 += "h" + Double.toString(thick * -1) + " ";
+                down = !down;
+            }
+
+            else if(i % 2 == 1 && down == false)
+            {
+                f3 += "h" + Double.toString(thick) + " ";
+                down = !down;
+            }
+        }
+
+        System.out.println(f3);
+
+		box_five += svg_base + b5 + svg_style_path + "M " + Double.toString(x + length + length + 0.5 + thick) + " " + Double.toString(y + thick) + " ";
+		box_five += f3 + stroke + svg_tail;
+
+		box_six += svg_base + b6 + svg_style_path + "M " + Double.toString(x + length + length + 0.5 + thick) + " " + Double.toString(y + thick + height + 0.5) + " ";
+		box_six += f3 + stroke + svg_tail;
+
+    }
 	/*public static void makeString() {
 		String pos_vertical = Double.toString(height);
 		String neg_vertical = Double.toString(height * -1);
