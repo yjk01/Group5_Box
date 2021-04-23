@@ -75,14 +75,14 @@ public class Box
 
 		// Write to file
 		try {
-      		FileWriter myWriter = new FileWriter("Box4.svg");
+      		FileWriter myWriter = new FileWriter("Box5.svg");
 			
 			// Steps of writing SVG file
       		myWriter.write(svg_header); // writes the SVG header 
 			myWriter.write(box_one);
 			myWriter.write(box_two);
-//			myWriter.write(box_three);
-//			myWriter.write(box_four);
+			myWriter.write(box_three);
+			myWriter.write(box_four);
 //			myWriter.write(box_five);
 //			myWriter.write(box_six);
 
@@ -236,6 +236,130 @@ public class Box
 
 		box_two += svg_base + b2 + svg_style_path + "M " + Double.toString(x) + " " + Double.toString(y + width + 0.5) + " ";
 		box_two += f1 + stroke + svg_tail;
+
+		// ---------------------------FACE TWO -----------------------------
+		down  = true;
+
+        // top line
+        for(int i = 0; i < 9; i++)
+        {
+            if( i % 2 == 0 && (i == 0 || i == 8))
+            {
+                f2 += "h" + Double.toString(nx - thick) + " ";
+            }
+
+            else if(i % 2 == 0 && (i != 0 && i != 8))
+            {
+                f2 += "h" + Double.toString(nx) + " ";
+            }
+
+            else if(i % 2 == 1 && down == true)
+            {
+                f2 += "v" + Double.toString(thick * -1) + " ";
+                down = !down;
+            }
+
+            else if(i % 2 == 1 && down == false)
+            {
+                f2 += "v" + Double.toString(thick) + " ";
+                down = !down;
+            }
+        }
+
+        f2 += "\n";
+        down = !down;
+
+        // right line
+        for(int i = 0; i < 9; i++)
+        {
+            if( i % 2 == 0 && (i == 0 || i == 8))
+            {
+                f2 += "v" + Double.toString(ny - thick) + " ";
+            }
+
+            else if(i % 2 == 0 && (i != 0 || i != 8))
+            {
+                f2 += "v" + Double.toString(ny) + " ";
+            }
+            else if(i % 2 == 1 && down == true)
+            {
+                f2 += "h" + Double.toString(thick * -1) + " ";
+                down = !down;
+            }
+
+            else if(i % 2 == 1 && down == false)
+            {
+                f2 += "h" + Double.toString(thick) + " ";
+                down = !down;
+            }
+
+        }
+
+        f2 += "\n";
+
+        // bottom line
+        for(int i = 0; i < 9; i++)
+        {
+            if( i % 2 == 0 && (i == 0 || i == 8))
+            {
+                f2 += "h" + Double.toString((nx - thick) * -1) + " ";
+            }
+
+            else if(i % 2 == 0 && (i != 0 && i != 8))
+            {
+                f2 += "h" + Double.toString(nx * -1) + " ";
+            }
+
+            else if(i % 2 == 1 && down == true)
+            {
+                f2 += "v" + Double.toString(thick * -1) + " ";
+                down = !down;
+            }
+
+            else if(i % 2 == 1 && down == false)
+            {
+                f2 += "v" + Double.toString(thick) + " ";
+                down = !down;
+            }
+        }
+
+        f2 += "\n";
+        down = !down;
+
+        // left line
+        for(int i = 0; i < 9; i++)
+        {
+            if( i % 2 == 0 && (i == 0 || i == 8))
+            {
+                f2 += "v" + Double.toString((ny - thick) * -1) + " ";
+            }
+
+            else if(i % 2 == 0 && (i != 0 || i != 8))
+            {
+                f2 += "v" + Double.toString(ny * -1) + " ";
+            }
+            else if(i % 2 == 1 && down == true)
+            {
+                f2 += "h" + Double.toString(thick * -1) + " ";
+                down = !down;
+            }
+
+            else if(i % 2 == 1 && down == false)
+            {
+                f2 += "h" + Double.toString(thick) + " ";
+                down = !down;
+            }
+        }    
+
+        System.out.println(f2);
+
+		box_three += svg_base + b3 + svg_style_path + "M " + Double.toString(x + length + 0.5 + thick) + " " + Double.toString(y + thick) + " ";
+		box_three += f2 + stroke + svg_tail;
+
+		box_four += svg_base + b4 + svg_style_path + "M " + Double.toString(x + length + 0.5 + thick) + " " + Double.toString(y + thick + height + 0.5) + " ";
+		box_four += f2 + stroke + svg_tail;
+
+
 
 		
 	}
