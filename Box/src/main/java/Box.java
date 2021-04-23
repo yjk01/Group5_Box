@@ -13,6 +13,8 @@ public class Box
 	public static String box_two, box_three, box_four, box_five, box_six, vertical, horizontal;
 	public static String f1, f2, f3, f4, f5, f6;
 
+    public static String file_name;
+
 	public static String move = "M ";
 	public static String b1 = "\"box1\"", b2 = "\"box2\"", b3 = "\"box3\"", b4 = "\"box4\"", b5 = "\"box5\"", b6 = "\"box6\"";
 	public static String svg_header = "<?xml version='1.0' encoding='us-ascii'?>\n<svg height=\"18in\" viewBox=\"0.0 0.0 24.0 18.0\" width=\"24in\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:cc=\"http://creativecommons.org/ns#\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:inkscape=\"http://www.inkscape.org/namespaces/inkscape\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\" xmlns:svg=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n\n";
@@ -56,7 +58,7 @@ public class Box
 		// Make File
 		try 
 		{
-			File myObj = new File("Box1.svg");
+			File myObj = new File(file_name + ".svg");
 
 			if(myObj.createNewFile()) 
 				System.out.println("File created: " + myObj.getName());
@@ -73,7 +75,7 @@ public class Box
 
 		// Write to file
 		try {
-      		FileWriter myWriter = new FileWriter("Box8.svg");
+      		FileWriter myWriter = new FileWriter(file_name + ".svg");
 			
 			// Steps of writing SVG file
       		myWriter.write(svg_header); // writes the SVG header 
@@ -117,6 +119,9 @@ public class Box
 
 		System.out.print("Enter material thickness: ");
 		thick = scan.nextDouble();
+
+        System.out.print("Enter file name for svg code: ");
+        file_name = scan.next();
 
 		System.out.println("The box dimensions are " + height + " " + length + " " + width + "\n");
 	}
