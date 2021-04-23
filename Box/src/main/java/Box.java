@@ -22,6 +22,36 @@ public class Box
 	public static String svg_style_path = " style=\"fill:none;stroke-linecap:round;stroke-linejoin:straight;\">\n\t<path d=\"";
 	public static String stroke = "\" stroke=\"rgb(0,0,0)\" stroke-width=\"0.01\"";
 
+    public String box1()
+	{
+		return "M 20.0 10.0 v-5.0 h20.0 v5.0 h-20.0";
+	}
+
+	public String box2()
+	{
+		return "M 20.0 10.0 v10.0 h20.0 v-10.0";
+	}
+
+	public String box3()
+	{
+		return "M 20.0 10.0 h-5.0 v10.0 h5.0";
+	}
+
+	public String box4()
+    {
+        return "M 20.0 20.0 v5.0 h20.0 v-5.0";
+    }
+
+    public String box5()
+    {
+        return "M 40.0 10.0 h5.0 v10 h-5.0";
+    }
+
+    public String box6()
+    {
+        return "M 45.0 10.0 h20.0 v10.0 h-20.0";
+    }
+
 	public static void makeSVGFile() {
 		// Make File
 		try 
@@ -43,7 +73,7 @@ public class Box
 
 		// Write to file
 		try {
-      		FileWriter myWriter = new FileWriter("Box7.svg");
+      		FileWriter myWriter = new FileWriter("Box8.svg");
 			
 			// Steps of writing SVG file
       		myWriter.write(svg_header); // writes the SVG header 
