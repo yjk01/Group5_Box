@@ -5,8 +5,14 @@ import java.util.Scanner;
 
 public class Box 
 {
-	public static double height, length, width, x = 1.0, y = 1.0;
-	public static String box_one, box_two, box_three, box_four, box_five, box_six, vertical, horizontal;
+	public static double height, length, width;	// dimension of box
+	public static double x = 0.1, y = 0.1;		// starting point
+	public static double thick = 0;				// holds thickness of material
+
+	public static String box_one = ""; 
+	public static String box_two, box_three, box_four, box_five, box_six, vertical, horizontal;
+	public static String f1, f2, f3, f4, f5, f6;
+
 	public static String move = "M ";
 	public static String b1 = "\"box1\"", b2 = "\"box2\"", b3 = "\"box3\"", b4 = "\"box4\"", b5 = "\"box5\"", b6 = "\"box6\"";
 	public static String svg_header = "<?xml version='1.0' encoding='us-ascii'?>\n<svg height=\"18in\" viewBox=\"0.0 0.0 24.0 18.0\" width=\"24in\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:cc=\"http://creativecommons.org/ns#\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:inkscape=\"http://www.inkscape.org/namespaces/inkscape\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\" xmlns:svg=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n\n";
@@ -14,7 +20,9 @@ public class Box
 	public static String svg_base = "<g id = ";
 	public static String svg_tail = "/>\n</g>\n\n";
 	public static String svg_style_path = " style=\"fill:none;stroke-linecap:round;stroke-linejoin:straight;\">\n\t<path d=\"";
+	public static String stroke = "\" stroke=\"rgb(0,0,0)\" stroke-width=\"0.01\"";
 
+/*
 	public String box1()
 	{
 		return "M 20.0 10.0 v-5.0 h20.0 v5.0 h-20.0";
@@ -44,68 +52,194 @@ public class Box
     {
         return "M 45.0 10.0 h20.0 v10.0 h-20.0";
     }
+*/
 
 	public static void makeSVGFile() {
 		// Make File
-		try {
+		try 
+		{
 			File myObj = new File("Box1.svg");
-			if(myObj.createNewFile()) {
+
+			if(myObj.createNewFile()) 
 				System.out.println("File created: " + myObj.getName());
-			} else {
+
+			else 
 				System.out.println("SVG file already exists.");
-			}
-		}	catch(IOException e) {
+
+		}	catch(IOException e) 
+		{
 				System.out.println("An error occured.");
+
 				e.printStackTrace();
 		}
 
 		// Write to file
 		try {
-      		FileWriter myWriter = new FileWriter("Box1.svg");
+      		FileWriter myWriter = new FileWriter("Box4.svg");
 			
 			// Steps of writing SVG file
       		myWriter.write(svg_header); // writes the SVG header 
-
 			myWriter.write(box_one);
 			myWriter.write(box_two);
-			myWriter.write(box_three);
-			myWriter.write(box_four);
-			myWriter.write(box_five);
-			myWriter.write(box_six);
+//			myWriter.write(box_three);
+//			myWriter.write(box_four);
+//			myWriter.write(box_five);
+//			myWriter.write(box_six);
 
 			// end of SVG file
 			myWriter.write(svg_end);
       		myWriter.close();
+
       		System.out.println("Successfully wrote to the SVG file.");
-    	} catch (IOException e) {
+    	} 
+		
+		catch (IOException e) 
+		{
       		System.out.println("An error occurred.");
+
       		e.printStackTrace();
     	}
 	}
 
 	// User input
-	public static void userInput() {
-
+	public static void userInput() 
+	{
 		System.out.println("JUJUM BOX MAKING\nPlease enter the box dimensions in order of height, length, width.\n");
 
 		Scanner scan = new Scanner(System.in); // creates scanner
 
 		System.out.print("Enter height: ");
 		height = scan.nextDouble();
+
 		System.out.print("Enter length: ");
 		length = scan.nextDouble();
+
 		System.out.print("Enter width: ");
 		width = scan.nextDouble();
 
-		height = height;
-		length  = length;
-		width  = width;
+		System.out.print("Enter material thickness: ");
+		thick = scan.nextDouble();
 
 		System.out.println("The box dimensions are " + height + " " + length + " " + width + "\n");
-
 	}
 
-	public static void makeString() {
+	public static void makeS()
+	{
+        double nx = 0, ny = 0, nz = 0; // variables that hold the divided measurements
+        boolean down = false;          // checks if line started to draw down / up
+        boolean side = false;          // check if line started to drawn left / right
+
+		f1 = f2 = f3 =  "";
+		box_two = box_three = box_four = box_five = box_six = "";
+
+        nx = length / 5;
+        ny = height / 5;
+        nz = width / 5;
+        
+        // for loop that generates the top line for face 1
+        for(int i = 0; i < 9; i++)
+        {
+            if(i % 2 == 0)
+            {
+                f1 += "h" + Double.toString(nx) + " ";
+            }
+            
+            else if(i % 2 == 1 && down == false)
+            {
+                f1 += "v" + Double.toString(thick) + " ";
+                down = !down;
+            }
+
+            else if(i % 2 == 1 && down == true)
+            {
+                f1 += "v" + Double.toString(thick * -1) + " ";
+                down = !down;
+            }
+        }
+
+        f1 += "\n";
+
+        down = !down;
+        
+        // for loop that generates the right line for face 1
+        for(int i = 0; i < 9; i++)
+        {
+            if(i % 2 == 0)
+            {
+                f1 += "v" + Double.toString(nz) + " ";
+            }
+            
+            else if(i % 2 == 1 && down == false)
+            {
+                f1 += "h" + Double.toString(thick) + " ";
+                down = !down;
+            }
+
+            else if(i % 2 == 1 && down == true)
+            {
+                f1 += "h" + Double.toString(thick * -1) + " ";
+                down = !down;
+            }
+        }
+
+        f1 += "\n";
+
+        // for loop that generates the bottom line for face 1
+        for(int i = 0; i < 9; i++)
+        {
+            if(i % 2 == 0)
+            {
+                f1 += "h" + Double.toString(nx * -1) + " ";
+            }
+            
+            else if(i % 2 == 1 && down == false)
+            {
+                f1 += "v" + Double.toString(thick) + " ";
+                down = !down;
+            }
+
+            else if(i % 2 == 1 && down == true)
+            {
+                f1 += "v" + Double.toString(thick * -1) + " ";
+                down = !down;
+            }
+        }
+
+        f1 += "\n";
+        down = !down;
+
+        // for loop that generates the left line for face 1
+        for(int i = 0; i < 9; i++)
+        {
+            if(i % 2 == 0)
+            {
+                f1 += "v" + Double.toString(nz * -1) + " ";
+            }
+            
+            else if(i % 2 == 1 && down == false)
+            {
+                f1 += "h" + Double.toString(thick) + " ";
+                down = !down;
+            }
+
+            else if(i % 2 == 1 && down == true)
+            {
+                f1 += "h" + Double.toString(thick * -1) + " ";
+                down = !down;
+            }
+        }
+
+        System.out.println(f1);
+
+		box_one += svg_base + b1 + svg_style_path + "M " + Double.toString(x) + " " + Double.toString(y) + " ";
+		box_one += f1 + stroke + svg_tail;
+
+		box_two += svg_base + b2 + svg_style_path + "M " + Double.toString(x) + " " + Double.toString(y + width + 0.5) + " ";
+		box_two += f1 + stroke + svg_tail;
+
+		
+	}
+	/*public static void makeString() {
 		String pos_vertical = Double.toString(height);
 		String neg_vertical = Double.toString(height * -1);
 		String pos_horizontal = Double.toString(length);
@@ -135,7 +269,7 @@ public class Box
 
 		reset_y4 = y + width + 0.5;
 		box_six = svg_base + b6 + svg_style_path + "M " + Double.toString(reset_x) + " " + Double.toString(reset_y4) + " v" + pos_width + " h" + pos_vertical + " v" + neg_width + " h" + neg_vertical + "\"" + " stroke=\"rgb(0,0,0)\" stroke-width = \"0.10\"" + svg_tail;
-	}
+	}*/
 	
     public static void main( String[] args )
     {
@@ -147,7 +281,8 @@ public class Box
 		// System.out.println("Box 6: M 45.0 10.0 h20.0 v10.0 h-20.0");
 
 		userInput();
-		makeString();
+		makeS();
+		// makeString();
 		makeSVGFile();
 
     }
