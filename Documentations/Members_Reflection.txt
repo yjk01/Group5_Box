@@ -1,0 +1,16 @@
+Weekly Member Reflection
+------------------------
+02/26/2021
+Julio - Built test cases (33%)
+Jun - Worked on documentation (33%)
+Miranda - Worked on documentation (33%)
+
+03/18/2021
+Julio - Built test cases (33%)
+Jun - Gathering information about box tabs (33%)
+Miranda - Worked on user stories and documentation (33%)
+
+3/26/2021
+Julio - input/output (25%)
+Jun - Added more test cases, Cyclomatic complexity (50%)
+Miranda - Documentation (25%)
