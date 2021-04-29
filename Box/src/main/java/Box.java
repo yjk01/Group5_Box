@@ -146,9 +146,7 @@ public class Box
         for(int i = 0; i < 9; i++)
         {
             if(i % 2 == 0)
-            {
                 f1 += "h" + Double.toString(nx) + " ";
-            }
             
             else if(i % 2 == 1 && down == false)
             {
@@ -171,9 +169,7 @@ public class Box
         for(int i = 0; i < 9; i++)
         {
             if(i % 2 == 0)
-            {
                 f1 += "v" + Double.toString(nz) + " ";
-            }
             
             else if(i % 2 == 1 && down == false)
             {
@@ -194,9 +190,7 @@ public class Box
         for(int i = 0; i < 9; i++)
         {
             if(i % 2 == 0)
-            {
                 f1 += "h" + Double.toString(nx * -1) + " ";
-            }
             
             else if(i % 2 == 1 && down == false)
             {
@@ -218,9 +212,7 @@ public class Box
         for(int i = 0; i < 9; i++)
         {
             if(i % 2 == 0)
-            {
                 f1 += "v" + Double.toString(nz * -1) + " ";
-            }
             
             else if(i % 2 == 1 && down == false)
             {
@@ -250,14 +242,10 @@ public class Box
         for(int i = 0; i < 9; i++)
         {
             if( i % 2 == 0 && (i == 0 || i == 8))
-            {
                 f2 += "h" + Double.toString(nx - thick) + " ";
-            }
 
             else if(i % 2 == 0 && (i != 0 && i != 8))
-            {
                 f2 += "h" + Double.toString(nx) + " ";
-            }
 
             else if(i % 2 == 1 && down == true)
             {
@@ -279,14 +267,11 @@ public class Box
         for(int i = 0; i < 9; i++)
         {
             if( i % 2 == 0 && (i == 0 || i == 8))
-            {
                 f2 += "v" + Double.toString(ny - thick) + " ";
-            }
 
             else if(i % 2 == 0 && (i != 0 || i != 8))
-            {
                 f2 += "v" + Double.toString(ny) + " ";
-            }
+
             else if(i % 2 == 1 && down == true)
             {
                 f2 += "h" + Double.toString(thick * -1) + " ";
@@ -307,14 +292,10 @@ public class Box
         for(int i = 0; i < 9; i++)
         {
             if( i % 2 == 0 && (i == 0 || i == 8))
-            {
                 f2 += "h" + Double.toString((nx - thick) * -1) + " ";
-            }
 
             else if(i % 2 == 0 && (i != 0 && i != 8))
-            {
                 f2 += "h" + Double.toString(nx * -1) + " ";
-            }
 
             else if(i % 2 == 1 && down == true)
             {
@@ -336,14 +317,11 @@ public class Box
         for(int i = 0; i < 9; i++)
         {
             if( i % 2 == 0 && (i == 0 || i == 8))
-            {
                 f2 += "v" + Double.toString((ny - thick) * -1) + " ";
-            }
 
             else if(i % 2 == 0 && (i != 0 || i != 8))
-            {
                 f2 += "v" + Double.toString(ny * -1) + " ";
-            }
+
             else if(i % 2 == 1 && down == true)
             {
                 f2 += "h" + Double.toString(thick * -1) + " ";
@@ -373,9 +351,7 @@ public class Box
         for(int i = 0; i < 9; i++)
         {
             if(i % 2 == 0)
-            {
                 f3 += "h" + Double.toString(nz) + " ";
-            }
             
             else if(i % 2 == 1 && down == false)
             {
@@ -396,14 +372,11 @@ public class Box
         for(int i = 0; i < 9; i++)
         {
             if( i % 2 == 0 && (i == 0 || i == 8))
-            {
                 f3 += "v" + Double.toString(ny - thick) + " ";
-            }
 
             else if(i % 2 == 0 && (i != 0 || i != 8))
-            {
                 f3 += "v" + Double.toString(ny) + " ";
-            }
+
             else if(i % 2 == 1 && down == true)
             {
                 f3 += "h" + Double.toString(thick * -1) + " ";
@@ -425,9 +398,7 @@ public class Box
         for(int i = 0; i < 9; i++)
         {
             if(i % 2 == 0)
-            {
                 f3 += "h" + Double.toString(nz * -1) + " ";
-            }
             
             else if(i % 2 == 1 && down == false)
             {
@@ -448,14 +419,11 @@ public class Box
         for(int i = 0; i < 9; i++)
         {
             if( i % 2 == 0 && (i == 0 || i == 8))
-            {
                 f3 += "v" + Double.toString((ny - thick) * -1) + " ";
-            }
 
             else if(i % 2 == 0 && (i != 0 || i != 8))
-            {
                 f3 += "v" + Double.toString(ny * -1) + " ";
-            }
+            
             else if(i % 2 == 1 && down == true)
             {
                 f3 += "h" + Double.toString(thick * -1) + " ";
@@ -478,52 +446,12 @@ public class Box
 		box_six += f3 + stroke + svg_tail;
 
     }
-	/*public static void makeString() {
-		String pos_vertical = Double.toString(height);
-		String neg_vertical = Double.toString(height * -1);
-		String pos_horizontal = Double.toString(length);
-		String neg_horizontal = Double.toString(length * -1);
-		String pos_width = Double.toString(width);
-		String neg_width = Double.toString(width * -1);
-		double reset_y, reset_y2, reset_y3, reset_y4; // have to reset y everytime to shift parts down so they dont overlap
-		double reset_x;
-
-		box_one = svg_base + b1 + svg_style_path + "M " + Double.toString(x) + " " + Double.toString(y) + " v" + pos_vertical + " h" + pos_horizontal + " v" + neg_vertical + " h" + neg_horizontal + "\"" + " stroke=\"rgb(0,0,0)\" stroke-width = \"0.10\"" + svg_tail;
-
-		reset_y = (y + height + 0.5);
-
-		box_two = svg_base + b2 + svg_style_path + "M " + Double.toString(x) + " " + Double.toString(reset_y) + " v" + pos_vertical + " h" + pos_horizontal + " v" + neg_vertical + " h" + neg_horizontal + "\"" + " stroke=\"rgb(0,0,0)\" stroke-width = \"0.10\"" + svg_tail;
-		
-		//reset_y2 = (reset_y + height + 0.5);
-		//reset_y = (reset_y + (height/2) + y);
-		reset_y2 = reset_y * 1.8;
-		box_three = svg_base + b3 + svg_style_path + "M " + Double.toString(x) + " " + Double.toString(reset_y2) + " v" + pos_width + " h" + pos_horizontal + " v" + neg_width + " h" + neg_horizontal + "\"" + " stroke=\"rgb(0,0,0)\" stroke-width = \"0.10\"" + svg_tail;
-
-		// reset_y3 = reset_y2 +width+ 0.5;
-		reset_y3 = reset_y2 * 1.2;
-		box_four = svg_base + b4 + svg_style_path + "M " + Double.toString(x) + " " + Double.toString(reset_y3) + " v" + pos_width + " h" + pos_horizontal + " v" + neg_width + " h" + neg_horizontal + "\"" + " stroke=\"rgb(0,0,0)\" stroke-width = \"0.10\"" + svg_tail;
-
-		reset_x = (x + length + 1.5); 
-		box_five = svg_base + b5 + svg_style_path + "M " + Double.toString(reset_x) + " " + Double.toString(y) + " v" + pos_width + " h" + pos_vertical + " v" + neg_width + " h" + neg_vertical + "\"" + " stroke=\"rgb(0,0,0)\" stroke-width = \"0.10\"" + svg_tail;
-
-		reset_y4 = y + width + 0.5;
-		box_six = svg_base + b6 + svg_style_path + "M " + Double.toString(reset_x) + " " + Double.toString(reset_y4) + " v" + pos_width + " h" + pos_vertical + " v" + neg_width + " h" + neg_vertical + "\"" + " stroke=\"rgb(0,0,0)\" stroke-width = \"0.10\"" + svg_tail;
-	}*/
 	
     public static void main( String[] args )
     {
-        // System.out.println("Box 1: M 20.0 10.0 v-5.0 h20.0 v5.0 h-20.0");
-		// System.out.println("Box 2: M 20.0 10.0 v10.0 h20.0 v-10.0");
-		// System.out.println("Box 3: M 20.0 10.0 h-5.0 v10.0 h5.0");
-		// System.out.println("Box 4: M 20.0 20.0 v5.0 h20.0 v-5.0");
-		// System.out.println("Box 5: M 40.0 10.0 h5.0 v10 h-5.0");
-		// System.out.println("Box 6: M 45.0 10.0 h20.0 v10.0 h-20.0");
-
 		userInput();
 		makeS();
-		// makeString();
 		makeSVGFile();
-
     }
 	
 }
