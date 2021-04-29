@@ -359,10 +359,11 @@ public class Box
 
         System.out.println(f2 + "\n");
 
-		box_three += svg_base + b3 + svg_style_path + "M " + Double.toString(x + length + 0.5 + thick) + " " + Double.toString(y + thick) + " ";
+        // removed thickness from M, just to adjust some spacing issue
+		box_three += svg_base + b3 + svg_style_path + "M " + Double.toString(x + length + 0.5) + " " + Double.toString(y + thick) + " ";
 		box_three += f2 + stroke + svg_tail;
 
-		box_four += svg_base + b4 + svg_style_path + "M " + Double.toString(x + length + 0.5 + thick) + " " + Double.toString(y + thick + height + 0.5) + " ";
+		box_four += svg_base + b4 + svg_style_path + "M " + Double.toString(x + length + 0.5) + " " + Double.toString(y + thick + height + 0.5) + " ";
 		box_four += f2 + stroke + svg_tail;
 
         // --------------- face 3 --------------------

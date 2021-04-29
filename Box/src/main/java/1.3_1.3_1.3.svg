@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='us-ascii'?>
+<svg height="18in" viewBox="0.0 0.0 24.0 18.0" width="24in" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<g id = "box1" style="fill:none;stroke-linecap:round;stroke-linejoin:straight;">
+	<path d="M 0.1 0.1 h0.26 v0.125 h0.26 v-0.125 h0.26 v0.125 h0.26 v-0.125 h0.26 
+v0.26 h-0.125 v0.26 h0.125 v0.26 h-0.125 v0.26 h0.125 v0.26 
+h-0.26 v-0.125 h-0.26 v0.125 h-0.26 v-0.125 h-0.26 v0.125 h-0.26 
+v-0.26 h0.125 v-0.26 h-0.125 v-0.26 h0.125 v-0.26 h-0.125 v-0.26 " stroke="rgb(0,0,0)" stroke-width="0.01"/>
+</g>
+
+<g id = "box2" style="fill:none;stroke-linecap:round;stroke-linejoin:straight;">
+	<path d="M 0.1 1.9000000000000001 h0.26 v0.125 h0.26 v-0.125 h0.26 v0.125 h0.26 v-0.125 h0.26 
+v0.26 h-0.125 v0.26 h0.125 v0.26 h-0.125 v0.26 h0.125 v0.26 
+h-0.26 v-0.125 h-0.26 v0.125 h-0.26 v-0.125 h-0.26 v0.125 h-0.26 
+v-0.26 h0.125 v-0.26 h-0.125 v-0.26 h0.125 v-0.26 h-0.125 v-0.26 " stroke="rgb(0,0,0)" stroke-width="0.01"/>
+</g>
+
+<g id = "box3" style="fill:none;stroke-linecap:round;stroke-linejoin:straight;">
+	<path d="M 2.0250000000000004 0.225 h0.135 v-0.125 h0.26 v0.125 h0.26 v-0.125 h0.26 v0.125 h0.135 
+v0.135 h0.125 v0.26 h-0.125 v0.26 h0.125 v0.26 h-0.125 v0.135 
+h-0.135 v0.125 h-0.26 v-0.125 h-0.26 v0.125 h-0.26 v-0.125 h-0.135 
+v-0.135 h-0.125 v-0.26 h0.125 v-0.26 h-0.125 v-0.26 h0.125 v-0.135 " stroke="rgb(0,0,0)" stroke-width="0.01"/>
+</g>
+
+<g id = "box4" style="fill:none;stroke-linecap:round;stroke-linejoin:straight;">
+	<path d="M 2.0250000000000004 2.0250000000000004 h0.135 v-0.125 h0.26 v0.125 h0.26 v-0.125 h0.26 v0.125 h0.135 
+v0.135 h0.125 v0.26 h-0.125 v0.26 h0.125 v0.26 h-0.125 v0.135 
+h-0.135 v0.125 h-0.26 v-0.125 h-0.26 v0.125 h-0.26 v-0.125 h-0.135 
+v-0.135 h-0.125 v-0.26 h0.125 v-0.26 h-0.125 v-0.26 h0.125 v-0.135 " stroke="rgb(0,0,0)" stroke-width="0.01"/>
+</g>
+
+<g id = "box5" style="fill:none;stroke-linecap:round;stroke-linejoin:straight;">
+	<path d="M 3.325 0.225 h0.26 v-0.125 h0.26 v0.125 h0.26 v-0.125 h0.26 v0.125 h0.26 
+v0.135 h-0.125 v0.26 h0.125 v0.26 h-0.125 v0.26 h0.125 v0.135 
+h-0.26 v0.125 h-0.26 v-0.125 h-0.26 v0.125 h-0.26 v-0.125 h-0.26 
+v-0.135 h0.125 v-0.26 h-0.125 v-0.26 h0.125 v-0.26 h-0.125 v-0.135 " stroke="rgb(0,0,0)" stroke-width="0.01"/>
+</g>
+
+<g id = "box6" style="fill:none;stroke-linecap:round;stroke-linejoin:straight;">
+	<path d="M 3.325 2.0250000000000004 h0.26 v-0.125 h0.26 v0.125 h0.26 v-0.125 h0.26 v0.125 h0.26 
+v0.135 h-0.125 v0.26 h0.125 v0.26 h-0.125 v0.26 h0.125 v0.135 
+h-0.26 v0.125 h-0.26 v-0.125 h-0.26 v0.125 h-0.26 v-0.125 h-0.26 
+v-0.135 h0.125 v-0.26 h-0.125 v-0.26 h0.125 v-0.26 h-0.125 v-0.135 " stroke="rgb(0,0,0)" stroke-width="0.01"/>
+</g>
+
+</svg>
