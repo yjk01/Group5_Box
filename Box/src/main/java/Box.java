@@ -227,7 +227,7 @@ public class Box
             }
         }
 
-        System.out.println(f1 + "\n");
+        //System.out.println(f1 + "\n");
 
 		box_one += svg_base + b1 + svg_style_path + "M " + Double.toString(x) + " " + Double.toString(y) + " ";
 		box_one += f1 + stroke + svg_tail;
@@ -335,7 +335,7 @@ public class Box
             }
         }    
 
-        System.out.println(f2 + "\n");
+        //System.out.println(f2 + "\n");
 
         // removed thickness from M, just to adjust some spacing issue
 		box_three += svg_base + b3 + svg_style_path + "M " + Double.toString(x + length + 0.5) + " " + Double.toString(y + thick) + " ";
@@ -437,7 +437,7 @@ public class Box
             }
         }
 
-        System.out.println(f3);
+        //System.out.println(f3);
 
 		box_five += svg_base + b5 + svg_style_path + "M " + Double.toString(x + length + length + 0.5 + thick) + " " + Double.toString(y + thick) + " ";
 		box_five += f3 + stroke + svg_tail;
