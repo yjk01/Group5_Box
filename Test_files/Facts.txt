@@ -10,3 +10,8 @@
 new late discoveries
 -- lines that meet have some issue with smooth connection
 -- they don't completely overlap
+-- update) doesn't matter
+
+phone holder
+-- rectangular box for connecting charger is at face 3 of box
+-- maybe use length of lowermost tab as x and 1/2 of tab 1 to 1/2 tab 2 as y of the rect. 
