@@ -446,6 +446,13 @@ public class Box
 		box_six += f3 + stroke + svg_tail;
 
     }
+
+    public static void phone()
+    {
+        double nx = 0, nz = 0; // x, y values for the insert box
+        double cx = 0, cz = 0; // x, y for the coordinates for M (starting point)
+
+    }
 	
     public static void main( String[] args )
     {

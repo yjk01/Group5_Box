@@ -15,3 +15,7 @@ new late discoveries
 phone holder
 -- rectangular box for connecting charger is at face 3 of box
 -- maybe use length of lowermost tab as x and 1/2 of tab 1 to 1/2 tab 2 as y of the rect. 
+-- Dr. Reeves phone = Google pixel 3a (6.0 x 2.80 x 0.30 in)
+-- Iphone 11(5.94x2.98x0.33 in)
+-- Insert box should be 3~4in x 0.5 in
+-- cant find any popular phones thicker than 0.5 in
