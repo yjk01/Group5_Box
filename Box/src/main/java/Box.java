@@ -12,7 +12,7 @@ public class Box
 	public static String box_one = ""; 
 	public static String box_two, box_three, box_four, box_five, box_six, vertical, horizontal;
 	public static String f1, f2, f3, f4, f5, f6;
-    public static String phone_in, phone_box;
+    public static String phone_in, phone_box, phone_tab, phone_tab1;
 
     public static String file_name;
 
@@ -87,6 +87,7 @@ public class Box
 			myWriter.write(box_five);
 			myWriter.write(box_six);
             myWriter.write(phone_in);
+            myWriter.write(phone_tab);
 
 			// end of SVG file
 			myWriter.write(svg_end);
@@ -455,6 +456,7 @@ public class Box
         double cx = 0, cz = 0; // x, y for the coordinates for M (starting point)
         phone_box = "";
         phone_in = "";
+        phone_tab = "";
 
         nx = length / 5;
         nz = width / 5;
@@ -463,8 +465,14 @@ public class Box
         cz = nz + (nz / 2);
 
         
-        phone_in += svg_base + "\"phone_insert\"" + phone_box + svg_style_path + "M " + Double.toString(cx + 0.1) + " " + Double.toString(cz + 0.1) + " ";
+        phone_in += svg_base + "\"phone_insert\"" + svg_style_path + "M " + Double.toString(cx + 0.1) + " " + Double.toString(cz + 0.1) + " ";
         phone_in += "h1.5 v0.5 h-3.0 v-0.5 h1.5" + stroke + svg_tail;
+
+        phone_tab += svg_base + "\"phone_tab\"" + svg_style_path + "M " + Double.toString(0.1) + " " + Double.toString(0.1 + (2* width) + (2* 0.5)) + " ";
+        phone_tab += "h1.8 v0.1 h0.125 v0.2 h-0.125 v0.1 h-1.8 v-0.4" + stroke + svg_tail;
+
+        phone_tab += svg_base + "\"phone_tab1\"" + svg_style_path + "M " + Double.toString(0.1) + " " + Double.toString(0.1 + (2* width) + (3* 0.5)) + " ";
+        phone_tab += "h1.8 v0.1 h0.125 v0.2 h-0.125 v0.1 h-1.8 v-0.4" + stroke + svg_tail;
 
         System.out.println("\n");
         System.out.println("CX: " + cx + " CZ: " + cz);
