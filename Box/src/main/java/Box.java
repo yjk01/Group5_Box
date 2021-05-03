@@ -88,6 +88,8 @@ public class Box
 			myWriter.write(box_six);
             myWriter.write(phone_in);
             myWriter.write(phone_tab);
+            myWriter.write(p_tab_in);
+            myWriter.write(p_tab_in1);
 
 			// end of SVG file
 			myWriter.write(svg_end);
@@ -483,7 +485,10 @@ public class Box
         py = (ny - thick) + (2 * ny);
 
         p_tab_in += svg_base + "\"phone_tab_insert\"" + svg_style_path + "M " + Double.toString(px) + " " + Double.toString(py) + " ";
-        p_tab_in += "h" + Double.toString(thick / 2) + " "
+        p_tab_in += "h0.1 v"  + Double.toString(thick) + " h-0.2 v" + Double.toString(thick * -1) + " h0.1" + stroke + svg_tail; 
+
+        p_tab_in1 += svg_base + "\"phone_tab_insert\"" + svg_style_path + "M " + Double.toString(px + (2 * nx)) + " " + Double.toString(py) + " ";
+        p_tab_in1 += "h0.1 v"  + Double.toString(thick) + " h-0.2 v" + Double.toString(thick * -1) + " h0.1" + stroke + svg_tail;
         // System.out.println("\n");
         // System.out.println("CX: " + cx + " CZ: " + cz);
 
