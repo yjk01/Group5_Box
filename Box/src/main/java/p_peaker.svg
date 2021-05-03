@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='us-ascii'?>
+<svg height="18in" viewBox="0.0 0.0 24.0 18.0" width="24in" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<g id = "box1" style="fill:none;stroke-linecap:round;stroke-linejoin:straight;">
+	<path d="M 0.1 0.1 h0.8 v0.12 h0.8 v-0.12 h0.8 v0.12 h0.8 v-0.12 h0.8 
+v1.0 h-0.12 v1.0 h0.12 v1.0 h-0.12 v1.0 h0.12 v1.0 
+h-0.8 v-0.12 h-0.8 v0.12 h-0.8 v-0.12 h-0.8 v0.12 h-0.8 
+v-1.0 h0.12 v-1.0 h-0.12 v-1.0 h0.12 v-1.0 h-0.12 v-1.0 " stroke="rgb(0,0,0)" stroke-width="0.01"/>
+</g>
+
+<g id = "box2" style="fill:none;stroke-linecap:round;stroke-linejoin:straight;">
+	<path d="M 0.1 5.6 h0.8 v0.12 h0.8 v-0.12 h0.8 v0.12 h0.8 v-0.12 h0.8 
+v1.0 h-0.12 v1.0 h0.12 v1.0 h-0.12 v1.0 h0.12 v1.0 
+h-0.8 v-0.12 h-0.8 v0.12 h-0.8 v-0.12 h-0.8 v0.12 h-0.8 
+v-1.0 h0.12 v-1.0 h-0.12 v-1.0 h0.12 v-1.0 h-0.12 v-1.0 " stroke="rgb(0,0,0)" stroke-width="0.01"/>
+</g>
+
+<g id = "box3" style="fill:none;stroke-linecap:round;stroke-linejoin:straight;">
+	<path d="M 4.6 0.22 h0.68 v-0.12 h0.8 v0.12 h0.8 v-0.12 h0.8 v0.12 h0.68 
+v1.2799999999999998 h0.12 v1.4 h-0.12 v1.4 h0.12 v1.4 h-0.12 v1.2799999999999998 
+h-0.68 v0.12 h-0.8 v-0.12 h-0.8 v0.12 h-0.8 v-0.12 h-0.68 
+v-1.2799999999999998 h-0.12 v-1.4 h0.12 v-1.4 h-0.12 v-1.4 h0.12 v-1.2799999999999998 " stroke="rgb(0,0,0)" stroke-width="0.01"/>
+</g>
+
+<g id = "box4" style="fill:none;stroke-linecap:round;stroke-linejoin:straight;">
+	<path d="M 4.6 7.72 h0.68 v-0.12 h0.8 v0.12 h0.8 v-0.12 h0.8 v0.12 h0.68 
+v1.2799999999999998 h0.12 v1.4 h-0.12 v1.4 h0.12 v1.4 h-0.12 v1.2799999999999998 
+h-0.68 v0.12 h-0.8 v-0.12 h-0.8 v0.12 h-0.8 v-0.12 h-0.68 
+v-1.2799999999999998 h-0.12 v-1.4 h0.12 v-1.4 h-0.12 v-1.4 h0.12 v-1.2799999999999998 " stroke="rgb(0,0,0)" stroke-width="0.01"/>
+</g>
+
+<g id = "box5" style="fill:none;stroke-linecap:round;stroke-linejoin:straight;">
+	<path d="M 8.719999999999999 0.22 h1.0 v-0.12 h1.0 v0.12 h1.0 v-0.12 h1.0 v0.12 h1.0 
+v1.2799999999999998 h-0.12 v1.4 h0.12 v1.4 h-0.12 v1.4 h0.12 v1.2799999999999998 
+h-1.0 v0.12 h-1.0 v-0.12 h-1.0 v0.12 h-1.0 v-0.12 h-1.0 
+v-1.2799999999999998 h0.12 v-1.4 h-0.12 v-1.4 h0.12 v-1.4 h-0.12 v-1.2799999999999998 " stroke="rgb(0,0,0)" stroke-width="0.01"/>
+</g>
+
+<g id = "box6" style="fill:none;stroke-linecap:round;stroke-linejoin:straight;">
+	<path d="M 8.719999999999999 7.72 h1.0 v-0.12 h1.0 v0.12 h1.0 v-0.12 h1.0 v0.12 h1.0 
+v1.2799999999999998 h-0.12 v1.4 h0.12 v1.4 h-0.12 v1.4 h0.12 v1.2799999999999998 
+h-1.0 v0.12 h-1.0 v-0.12 h-1.0 v0.12 h-1.0 v-0.12 h-1.0 
+v-1.2799999999999998 h0.12 v-1.4 h-0.12 v-1.4 h0.12 v-1.4 h-0.12 v-1.2799999999999998 " stroke="rgb(0,0,0)" stroke-width="0.01"/>
+</g>
+
+<g id = "phone_insert" style="fill:none;stroke-linecap:round;stroke-linejoin:straight;">
+	<path d="M 2.1 1.6 h1.5 v0.5 h-3.0 v-0.5 h1.5" stroke="rgb(0,0,0)" stroke-width="0.01"/>
+</g>
+
+<g id = "phone_tab" style="fill:none;stroke-linecap:round;stroke-linejoin:straight;">
+	<path d="M 0.1 11.1 h1.8 v0.1 h0.12 v0.2 h -0.12 v0.1 h-1.8 v-0.4" stroke="rgb(0,0,0)" stroke-width="0.01"/>
+</g>
+
+<g id = "phone_tab1" style="fill:none;stroke-linecap:round;stroke-linejoin:straight;">
+	<path d="M 0.1 11.6 h1.8 v0.1 h0.12 v0.2 h -0.12 v0.1 h-1.8 v-0.4" stroke="rgb(0,0,0)" stroke-width="0.01"/>
+</g>
+
+<g id = "phone_tab_insert" style="fill:none;stroke-linecap:round;stroke-linejoin:straight;">
+	<path d="M 5.68 4.08 h0.1 v0.12 h-0.2 v-0.12 h0.1" stroke="rgb(0,0,0)" stroke-width="0.01"/>
+</g>
+
+<g id = "phone_tab_insert" style="fill:none;stroke-linecap:round;stroke-linejoin:straight;">
+	<path d="M 7.279999999999999 4.08 h0.1 v0.12 h-0.2 v-0.12 h0.1" stroke="rgb(0,0,0)" stroke-width="0.01"/>
+</g>
+
+<g id = "phone_peaker" style="fill:none;stroke-linecap:round;stroke-linejoin:straight;">
+	<path d="M 6.6 1.5 h1.5 v0.5 h-3.0 v-0.5 h1.5" stroke="rgb(0,0,0)" stroke-width="0.01"/>
+</g>
+
+</svg>

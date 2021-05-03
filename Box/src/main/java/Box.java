@@ -12,7 +12,7 @@ public class Box
 	public static String box_one = ""; 
 	public static String box_two, box_three, box_four, box_five, box_six, vertical, horizontal;
 	public static String f1, f2, f3, f4, f5, f6;
-    public static String phone_in, phone_box, phone_tab, phone_tab1, p_tab_in, p_tab_in1;
+    public static String phone_in, phone_box, phone_tab, phone_tab1, p_tab_in, p_tab_in1, p_peak;
 
     public static String file_name;
 
@@ -90,6 +90,7 @@ public class Box
             myWriter.write(phone_tab);
             myWriter.write(p_tab_in);
             myWriter.write(p_tab_in1);
+            myWriter.write(p_peak);
 
 			// end of SVG file
 			myWriter.write(svg_end);
@@ -457,17 +458,18 @@ public class Box
         double nx = 0, ny = 0, nz = 0; // x, y values for the insert box
         double cx = 0, cz = 0; // x, y for the coordinates for M (starting point)
         double px = 0, py = 0; // x, y for the coordinates for M (for tabs)
+        double ppx = 0, ppy = 0;
 
         phone_box = "";
         phone_in = "";
         phone_tab = "";
         p_tab_in = "";
         p_tab_in1 = "";
+        p_peak = "";
 
         nx = length / 5;
         ny = height / 5;
         nz = width / 5;
-
         cx = (2 * nx) + (nx / 2);
         cz = nz + (nz / 2);
 
@@ -475,12 +477,16 @@ public class Box
         phone_in += svg_base + "\"phone_insert\"" + svg_style_path + "M " + Double.toString(cx + 0.1) + " " + Double.toString(cz + 0.1) + " ";
         phone_in += "h1.5 v0.5 h-3.0 v-0.5 h1.5" + stroke + svg_tail;
 
+        //-------------------------------------two tabs-------------------------------------
+
         phone_tab += svg_base + "\"phone_tab\"" + svg_style_path + "M " + Double.toString(0.1) + " " + Double.toString(0.1 + (2* width) + (2* 0.5)) + " ";
         phone_tab += "h1.8 v0.1 h"+ Double.toString(thick) + " v0.2 h "+ Double.toString(thick * -1) + " v0.1 h-1.8 v-0.4" + stroke + svg_tail;
 
         phone_tab += svg_base + "\"phone_tab1\"" + svg_style_path + "M " + Double.toString(0.1) + " " + Double.toString(0.1 + (2* width) + (3* 0.5)) + " ";
         phone_tab += "h1.8 v0.1 h"+ Double.toString(thick) + " v0.2 h "+ Double.toString(thick * -1) + " v0.1 h-1.8 v-0.4" + stroke + svg_tail;
 
+        // ------------------------------------- two inserts --------------------------------
+        
         px = length + 0.6 + (nx - thick) + (nx / 2);
         py = (ny - thick) + (2 * ny);
 
@@ -489,9 +495,14 @@ public class Box
 
         p_tab_in1 += svg_base + "\"phone_tab_insert\"" + svg_style_path + "M " + Double.toString(px + (2 * nx)) + " " + Double.toString(py) + " ";
         p_tab_in1 += "h0.1 v"  + Double.toString(thick) + " h-0.2 v" + Double.toString(thick * -1) + " h0.1" + stroke + svg_tail;
-        // System.out.println("\n");
-        // System.out.println("CX: " + cx + " CZ: " + cz);
 
+        // ----------------------------------- phone peaker----------------------------------
+
+        ppx = 0.6 + length + (nx - thick) + nx + (nx / 2);
+        ppy = 0.1 + ny;
+
+        p_peak += svg_base + "\"phone_peaker\"" + svg_style_path + "M " + Double.toString(ppx) + " " + Double.toString(ppy) + " ";
+        p_peak += "h1.5 v0.5 h-3.0 v-0.5 h1.5" + stroke + svg_tail;
     }
 	
     public static void main( String[] args )
