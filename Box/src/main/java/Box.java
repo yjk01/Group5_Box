@@ -469,10 +469,10 @@ public class Box
         phone_in += "h1.5 v0.5 h-3.0 v-0.5 h1.5" + stroke + svg_tail;
 
         phone_tab += svg_base + "\"phone_tab\"" + svg_style_path + "M " + Double.toString(0.1) + " " + Double.toString(0.1 + (2* width) + (2* 0.5)) + " ";
-        phone_tab += "h1.8 v0.1 h0.125 v0.2 h-0.125 v0.1 h-1.8 v-0.4" + stroke + svg_tail;
+        phone_tab += "h1.8 v0.1 h"+ Double.toString(thick) + " v0.2 h "+ Double.toString(thick * -1) + " v0.1 h-1.8 v-0.4" + stroke + svg_tail;
 
         phone_tab += svg_base + "\"phone_tab1\"" + svg_style_path + "M " + Double.toString(0.1) + " " + Double.toString(0.1 + (2* width) + (3* 0.5)) + " ";
-        phone_tab += "h1.8 v0.1 h0.125 v0.2 h-0.125 v0.1 h-1.8 v-0.4" + stroke + svg_tail;
+        phone_tab += "h1.8 v0.1 h"+ Double.toString(thick) + " v0.2 h "+ Double.toString(thick * -1) + " v0.1 h-1.8 v-0.4" + stroke + svg_tail;
 
         System.out.println("\n");
         System.out.println("CX: " + cx + " CZ: " + cz);
