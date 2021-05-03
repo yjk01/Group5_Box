@@ -19,3 +19,4 @@ phone holder
 -- Iphone 11(5.94x2.98x0.33 in)
 -- Insert box should be 3~4in x 0.5 in
 -- cant find any popular phones thicker than 0.5 in
+-- charger thickness = 1/8 ~ 1/4 inch

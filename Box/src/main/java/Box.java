@@ -9,6 +9,8 @@ public class Box
 	public static double x = 0.1, y = 0.1;		// starting point
 	public static double thick = 0;				// holds thickness of material
 
+    public static int box = 0;
+
 	public static String box_one = ""; 
 	public static String box_two, box_three, box_four, box_five, box_six, vertical, horizontal;
 	public static String f1, f2, f3, f4, f5, f6;
@@ -23,7 +25,7 @@ public class Box
 	public static String svg_base = "<g id = ";
 	public static String svg_tail = "/>\n</g>\n\n";
 	public static String svg_style_path = " style=\"fill:none;stroke-linecap:round;stroke-linejoin:straight;\">\n\t<path d=\"";
-	public static String stroke = "\" stroke=\"rgb(0,0,0)\" stroke-width=\"0.01\"";
+	public static String stroke = "\" stroke=\"rgb(0,0,0)\" stroke-width=\"0.001\"";
 
     public String box1()
 	{
@@ -86,11 +88,15 @@ public class Box
 			myWriter.write(box_four);
 			myWriter.write(box_five);
 			myWriter.write(box_six);
-            myWriter.write(phone_in);
-            myWriter.write(phone_tab);
-            myWriter.write(p_tab_in);
-            myWriter.write(p_tab_in1);
-            myWriter.write(p_peak);
+            
+            if(box == 2)
+            {
+                myWriter.write(phone_in);
+                myWriter.write(phone_tab);
+                myWriter.write(p_tab_in);
+                myWriter.write(p_tab_in1);
+                myWriter.write(p_peak);
+            }
 
 			// end of SVG file
 			myWriter.write(svg_end);
@@ -110,15 +116,15 @@ public class Box
 	// User input
 	public static void userInput() 
 	{
-		System.out.println("JUJUM BOX MAKING\nPlease enter the box dimensions in order of height, length, width.\n");
+		System.out.println("JUJUM BOX MAKING\n\n Please enter the box dimensions in order of length, height, width.\n");
 
 		Scanner scan = new Scanner(System.in);
 
-		System.out.print("Enter height: ");
-		height = scan.nextDouble();
-
 		System.out.print("Enter length: ");
 		length = scan.nextDouble();
+
+		System.out.print("Enter height: ");
+		height = scan.nextDouble();
 
 		System.out.print("Enter width: ");
 		width = scan.nextDouble();
@@ -129,7 +135,7 @@ public class Box
         System.out.print("Enter file name for svg code: ");
         file_name = scan.next();
 
-		System.out.println("The box dimensions are " + height + " " + length + " " + width + "\n");
+		System.out.println("\nThe box's dimensions are " + length + " " + height + " " + width + "\n");
 	}
 
 	public static void makeS()
@@ -343,7 +349,6 @@ public class Box
 
         //System.out.println(f2 + "\n");
 
-        // removed thickness from M, just to adjust some spacing issue
 		box_three += svg_base + b3 + svg_style_path + "M " + Double.toString(x + length + 0.5) + " " + Double.toString(y + thick) + " ";
 		box_three += f2 + stroke + svg_tail;
 
@@ -475,15 +480,15 @@ public class Box
 
         
         phone_in += svg_base + "\"phone_insert\"" + svg_style_path + "M " + Double.toString(cx + 0.1) + " " + Double.toString(cz + 0.1) + " ";
-        phone_in += "h1.5 v0.5 h-3.0 v-0.5 h1.5" + stroke + svg_tail;
+        phone_in += "h1.5 v0.75 h-3.0 v-0.75 h1.5" + stroke + svg_tail;
 
         //-------------------------------------two tabs-------------------------------------
 
         phone_tab += svg_base + "\"phone_tab\"" + svg_style_path + "M " + Double.toString(0.1) + " " + Double.toString(0.1 + (2* width) + (2* 0.5)) + " ";
-        phone_tab += "h1.8 v0.1 h"+ Double.toString(thick) + " v0.2 h "+ Double.toString(thick * -1) + " v0.1 h-1.8 v-0.4" + stroke + svg_tail;
+        phone_tab += "h1.5 v0.1 h"+ Double.toString(thick) + " v0.2 h "+ Double.toString(thick * -1) + " v0.1 h-1.5 v-0.4" + stroke + svg_tail;
 
         phone_tab += svg_base + "\"phone_tab1\"" + svg_style_path + "M " + Double.toString(0.1) + " " + Double.toString(0.1 + (2* width) + (3* 0.5)) + " ";
-        phone_tab += "h1.8 v0.1 h"+ Double.toString(thick) + " v0.2 h "+ Double.toString(thick * -1) + " v0.1 h-1.8 v-0.4" + stroke + svg_tail;
+        phone_tab += "h1.5 v0.1 h"+ Double.toString(thick) + " v0.2 h "+ Double.toString(thick * -1) + " v0.1 h-1.5 v-0.4" + stroke + svg_tail;
 
         // ------------------------------------- two inserts --------------------------------
         
@@ -502,14 +507,24 @@ public class Box
         ppy = 0.1 + ny;
 
         p_peak += svg_base + "\"phone_peaker\"" + svg_style_path + "M " + Double.toString(ppx) + " " + Double.toString(ppy) + " ";
-        p_peak += "h1.5 v0.5 h-3.0 v-0.5 h1.5" + stroke + svg_tail;
+        p_peak += "h1.5 v0.75 h-3.0 v-0.75 h1.5" + stroke + svg_tail;
     }
 	
     public static void main( String[] args )
     {
+        box = 0;
+
+        Scanner scan = new Scanner(System.in);
+
 		userInput();
 		makeS();
-        phone();
+
+        System.out.print("Press 1 for a normal box, Press 2 for a phone holder: ");
+        box = scan.nextInt();
+
+        if(box == 2)
+            phone();
+
 		makeSVGFile();
     }
 }
