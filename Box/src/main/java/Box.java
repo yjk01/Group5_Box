@@ -12,6 +12,7 @@ public class Box
 	public static String box_one = ""; 
 	public static String box_two, box_three, box_four, box_five, box_six, vertical, horizontal;
 	public static String f1, f2, f3, f4, f5, f6;
+    public static String phone_in, phone_box;
 
     public static String file_name;
 
@@ -85,6 +86,7 @@ public class Box
 			myWriter.write(box_four);
 			myWriter.write(box_five);
 			myWriter.write(box_six);
+            myWriter.write(phone_in);
 
 			// end of SVG file
 			myWriter.write(svg_end);
@@ -451,6 +453,21 @@ public class Box
     {
         double nx = 0, nz = 0; // x, y values for the insert box
         double cx = 0, cz = 0; // x, y for the coordinates for M (starting point)
+        phone_box = "";
+        phone_in = "";
+
+        nx = length / 5;
+        nz = width / 5;
+
+        cx = (2 * nx) + (nx / 2);
+        cz = nz + (nz / 2);
+
+        
+        phone_in += svg_base + "\"phone_insert\"" + phone_box + svg_style_path + "M " + Double.toString(cx + 0.1) + " " + Double.toString(cz + 0.1) + " ";
+        phone_in += "h1.5 v0.5 h-3.0 v-0.5 h1.5" + stroke + svg_tail;
+
+        System.out.println("\n");
+        System.out.println("CX: " + cx + " CZ: " + cz);
 
     }
 	
@@ -458,6 +475,7 @@ public class Box
     {
 		userInput();
 		makeS();
+        phone();
 		makeSVGFile();
     }
 	
