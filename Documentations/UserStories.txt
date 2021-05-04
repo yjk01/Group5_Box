@@ -4,10 +4,9 @@ What the user wants out of the project:
 - Easy assembly for the customer
 - Has no rough edges
 - Box has tabs to hold sides together
-- User can put in inputs of size x,y,z which correspond to length, height, and width of box 
-- User inputs the number of phone slots they want up to two max
 - User can run on command prompt
+- User can put in inputs of size x,y,z which correspond to length, height, and width of box 
+- User can decide which material they are using
+- User can decide whether they want a normal box or a phone holder
 - Software will take whatever lengths were given by user and convert the size of box to whatever user wants
-- User-friendly
-- Box is able to successfully charge phones
-- End result will leave the customer happy and satisfied
+- Box (Phone holder) could hold the phone and have it charging at the same time

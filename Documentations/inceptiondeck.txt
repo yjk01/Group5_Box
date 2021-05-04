@@ -1,3 +1,5 @@
+Inception Deck
+
 - How can we code to generate svg file for back and front of box?
 - How can we allow for different input sizes such as (5,6,7)?
 - What will it take to have code to where a whole can be made to slide the phone in?
@@ -5,6 +7,6 @@
 - Can we make code to where a whole can be made to fit a phone charger?
 - How do we go about creating phone tabs to lift up phone so phone can properly charge?
 - How do we make sure all sides of the box are smooth, no rough edges?
-- Why are we here?
-- What's going to give?
-- What's it going to take?
+- How do we make sure that the program makes boxes for any dimensions? Can it take decimals?
+- How will we space the sides of the box so that we maximize the usage of one board?
+- How much flexibility will we give the user regarding what inputs they give us?

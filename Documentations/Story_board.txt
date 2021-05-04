@@ -15,3 +15,24 @@
 <Done>
 - File creation
 - Input control
+
+Update (4/30/21)
+
+<Not started>
+- cleaning code
+
+<In progress>
+
+<Ready for Test>
+- Implimentation of an actually phone stand
+
+<Done>
+- Algorithm for tabs
+- Spacing of 6 sides
+- Getting exact location of each point, line, and sides
+- File creation
+- User input
+- Formation of 6 sides
+- Svg code of each side
+- File creation
+- Input control
