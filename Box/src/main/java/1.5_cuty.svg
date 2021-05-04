@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='us-ascii'?>
+<svg height="18in" viewBox="0.0 0.0 24.0 18.0" width="24in" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<g id = "box1" style="fill:none;stroke-linecap:round;stroke-linejoin:straight;">
+	<path d="M 0.1 0.1 h0.3 v0.125 h0.3 v-0.125 h0.3 v0.125 h0.3 v-0.125 h0.3 
+v0.3 h-0.125 v0.3 h0.125 v0.3 h-0.125 v0.3 h0.125 v0.3 
+h-0.3 v-0.125 h-0.3 v0.125 h-0.3 v-0.125 h-0.3 v0.125 h-0.3 
+v-0.3 h0.125 v-0.3 h-0.125 v-0.3 h0.125 v-0.3 h-0.125 v-0.3 " stroke="rgb(0,0,0)" stroke-width="0.001"/>
+</g>
+
+<g id = "box2" style="fill:none;stroke-linecap:round;stroke-linejoin:straight;">
+	<path d="M 0.1 2.1 h0.3 v0.125 h0.3 v-0.125 h0.3 v0.125 h0.3 v-0.125 h0.3 
+v0.3 h-0.125 v0.3 h0.125 v0.3 h-0.125 v0.3 h0.125 v0.3 
+h-0.3 v-0.125 h-0.3 v0.125 h-0.3 v-0.125 h-0.3 v0.125 h-0.3 
+v-0.3 h0.125 v-0.3 h-0.125 v-0.3 h0.125 v-0.3 h-0.125 v-0.3 " stroke="rgb(0,0,0)" stroke-width="0.001"/>
+</g>
+
+<g id = "box3" style="fill:none;stroke-linecap:round;stroke-linejoin:straight;">
+	<path d="M 2.1 0.225 h0.175 v-0.125 h0.3 v0.125 h0.3 v-0.125 h0.3 v0.125 h0.175 
+v0.175 h0.125 v0.3 h-0.125 v0.3 h0.125 v0.3 h-0.125 v0.175 
+h-0.175 v0.125 h-0.3 v-0.125 h-0.3 v0.125 h-0.3 v-0.125 h-0.175 
+v-0.175 h-0.125 v-0.3 h0.125 v-0.3 h-0.125 v-0.3 h0.125 v-0.175 " stroke="rgb(0,0,0)" stroke-width="0.001"/>
+</g>
+
+<g id = "box4" style="fill:none;stroke-linecap:round;stroke-linejoin:straight;">
+	<path d="M 2.1 2.225 h0.175 v-0.125 h0.3 v0.125 h0.3 v-0.125 h0.3 v0.125 h0.175 
+v0.175 h0.125 v0.3 h-0.125 v0.3 h0.125 v0.3 h-0.125 v0.175 
+h-0.175 v0.125 h-0.3 v-0.125 h-0.3 v0.125 h-0.3 v-0.125 h-0.175 
+v-0.175 h-0.125 v-0.3 h0.125 v-0.3 h-0.125 v-0.3 h0.125 v-0.175 " stroke="rgb(0,0,0)" stroke-width="0.001"/>
+</g>
+
+<g id = "box5" style="fill:none;stroke-linecap:round;stroke-linejoin:straight;">
+	<path d="M 3.725 0.225 h0.3 v-0.125 h0.3 v0.125 h0.3 v-0.125 h0.3 v0.125 h0.3 
+v0.175 h-0.125 v0.3 h0.125 v0.3 h-0.125 v0.3 h0.125 v0.175 
+h-0.3 v0.125 h-0.3 v-0.125 h-0.3 v0.125 h-0.3 v-0.125 h-0.3 
+v-0.175 h0.125 v-0.3 h-0.125 v-0.3 h0.125 v-0.3 h-0.125 v-0.175 " stroke="rgb(0,0,0)" stroke-width="0.001"/>
+</g>
+
+<g id = "box6" style="fill:none;stroke-linecap:round;stroke-linejoin:straight;">
+	<path d="M 3.725 2.225 h0.3 v-0.125 h0.3 v0.125 h0.3 v-0.125 h0.3 v0.125 h0.3 
+v0.175 h-0.125 v0.3 h0.125 v0.3 h-0.125 v0.3 h0.125 v0.175 
+h-0.3 v0.125 h-0.3 v-0.125 h-0.3 v0.125 h-0.3 v-0.125 h-0.3 
+v-0.175 h0.125 v-0.3 h-0.125 v-0.3 h0.125 v-0.3 h-0.125 v-0.175 " stroke="rgb(0,0,0)" stroke-width="0.001"/>
+</g>
+
+</svg>

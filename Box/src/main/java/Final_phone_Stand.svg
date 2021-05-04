@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1"
+	 id="레이어_1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1728 1296"
+	 style="enable-background:new 0 0 1728 1296;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:1.000000e-03;stroke-linecap:round;stroke-miterlimit:288;}
+</style>
+<g id="box1">
+	<path class="st0" d="M7.2,7.2h57.6v9h57.6v-9H180v9h57.6v-9h57.6v43.2h-9v43.2h9v43.2h-9V180h9v43.2h-57.6v-9H180v9h-57.6v-9H64.8
+		v9H7.2V180h9v-43.2h-9V93.6h9V50.4h-9L7.2,7.2"/>
+</g>
+<g id="box2">
+	<path class="st0" d="M7.2,259.2h57.6v9h57.6v-9H180v9h57.6v-9h57.6v43.2h-9v43.2h9v43.2h-9V432h9v43.2h-57.6v-9H180v9h-57.6v-9
+		H64.8v9H7.2V432h9v-43.2h-9v-43.2h9v-43.2h-9L7.2,259.2"/>
+</g>
+<g id="box3">
+	<path class="st0" d="M331.2,16.2h48.6v-9h57.6v9H495v-9h57.6v9h48.6v63h9v72h-9v72h9v72h-9v63h-48.6v9H495v-9h-57.6v9h-57.6v-9
+		h-48.6v-63h-9v-72h9v-72h-9v-72h9L331.2,16.2"/>
+</g>
+<g id="box4">
+	<path class="st0" d="M331.2,412.2h48.6v-9h57.6v9H495v-9h57.6v9h48.6v63h9v72h-9v72h9v72h-9v63h-48.6v9H495v-9h-57.6v9h-57.6v-9
+		h-48.6v-63h-9v-72h9v-72h-9v-72h9L331.2,412.2"/>
+</g>
+<g id="box5">
+	<path class="st0" d="M628.2,16.2h43.2v-9h43.2v9h43.2v-9H801v9h43.2v63h-9v72h9v72h-9v72h9v63H801v9h-43.2v-9h-43.2v9h-43.2v-9
+		h-43.2v-63h9v-72h-9v-72h9v-72h-9V16.2"/>
+</g>
+<g id="box6">
+	<path class="st0" d="M628.2,412.2h43.2v-9h43.2v9h43.2v-9H801v9h43.2v63h-9v72h9v72h-9v72h9v63H801v9h-43.2v-9h-43.2v9h-43.2v-9
+		h-43.2v-63h9v-72h-9v-72h9v-72h-9V412.2"/>
+</g>
+<g id="phone_insert">
+	<path class="st0" d="M151.2,72h108v54h-216V72H151.2"/>
+</g>
+<g id="phone_tab">
+	<path class="st0" d="M7.2,511.2h108v7.2h9v14.4h-9v7.2H7.2L7.2,511.2"/>
+</g>
+<g id="phone_tab1">
+	<path class="st0" d="M7.2,547.2h108v7.2h9v14.4h-9v7.2H7.2L7.2,547.2"/>
+</g>
+<g id="phone_tab_insert">
+	<path class="st0" d="M408.6,290h7.2v9h-14.4v-9H408.6"/>
+</g>
+<g id="phone_tab_insert_1_">
+	<path class="st0" d="M523.8,290h7.2v9h-14.4v-9H523.8"/>
+</g>
+<g id="phone_peaker">
+	<path class="st0" d="M466.2,162.2h108v54h-99v18h-18v-18h-99v-54H466.2"/>
+</g>
+</svg>

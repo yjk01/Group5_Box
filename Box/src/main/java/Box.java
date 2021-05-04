@@ -1,3 +1,12 @@
+/*
+    Contributors: Jun Kim, Julio Lopez 
+    Class: CS374
+    Assignment: Final Box Project
+    Due Date: 05/04/2021
+    Instructor: Dr. Reeves
+
+    Program that generates a svg file based on user input.
+*/
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -9,8 +18,9 @@ public class Box
 	public static double x = 0.1, y = 0.1;		// starting point
 	public static double thick = 0;				// holds thickness of material
 
-    public static int box = 0;
+    public static int box = 0;                  // value that indicates what the program should do
 
+    // Holds the values produced by user input and the logic of this program
 	public static String box_one = ""; 
 	public static String box_two, box_three, box_four, box_five, box_six, vertical, horizontal;
 	public static String f1, f2, f3, f4, f5, f6;
@@ -18,6 +28,7 @@ public class Box
 
     public static String file_name;
 
+    // Fundamental strings for svg code
 	public static String move = "M ";
 	public static String b1 = "\"box1\"", b2 = "\"box2\"", b3 = "\"box3\"", b4 = "\"box4\"", b5 = "\"box5\"", b6 = "\"box6\"";
 	public static String svg_header = "<?xml version='1.0' encoding='us-ascii'?>\n<svg height=\"18in\" viewBox=\"0.0 0.0 24.0 18.0\" width=\"24in\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:cc=\"http://creativecommons.org/ns#\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:inkscape=\"http://www.inkscape.org/namespaces/inkscape\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\" xmlns:svg=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n\n";
@@ -57,7 +68,8 @@ public class Box
         return "M 45.0 10.0 h20.0 v10.0 h-20.0";
     }
 
-	public static void makeSVGFile() {
+	public static void makeSVGFile() 
+    {
 		// Make File
 		try 
 		{
@@ -81,7 +93,7 @@ public class Box
       		FileWriter myWriter = new FileWriter(file_name + ".svg");
 			
 			// Steps of writing SVG file
-      		myWriter.write(svg_header); // writes the SVG header 
+      		myWriter.write(svg_header);
 			myWriter.write(box_one);
 			myWriter.write(box_two);
 			myWriter.write(box_three);
@@ -89,6 +101,7 @@ public class Box
 			myWriter.write(box_five);
 			myWriter.write(box_six);
             
+            // only do this if the user wants a phone stand
             if(box == 2)
             {
                 myWriter.write(phone_in);
@@ -152,7 +165,7 @@ public class Box
         ny = height / 5;
         nz = width / 5;
         
-		// ---------------------------------- Face One ------------------------------------------------------------
+		// ----- Face one, Top-Bottom (X x Z) -----
         
 		//  top line
         for(int i = 0; i < 9; i++)
@@ -247,7 +260,8 @@ public class Box
 		box_two += svg_base + b2 + svg_style_path + "M " + Double.toString(x) + " " + Double.toString(y + width + 0.5) + " ";
 		box_two += f1 + stroke + svg_tail;
 
-		// ---------------------------FACE TWO -----------------------------
+		// ----- Face two, Front-Back (X x Y) -----
+
 		down  = true;
 
         // top line
@@ -355,7 +369,7 @@ public class Box
 		box_four += svg_base + b4 + svg_style_path + "M " + Double.toString(x + length + 0.5) + " " + Double.toString(y + thick + height + 0.5) + " ";
 		box_four += f2 + stroke + svg_tail;
 
-        // --------------- face 3 --------------------
+        // ----- Face 3, Left-Right (Z x Y) -----
         down = true;
 
         // top line
@@ -460,11 +474,12 @@ public class Box
 
     public static void phone()
     {
-        double nx = 0, ny = 0, nz = 0; // x, y values for the insert box
-        double cx = 0, cz = 0; // x, y for the coordinates for M (starting point)
-        double px = 0, py = 0; // x, y for the coordinates for M (for tabs)
-        double ppx = 0, ppy = 0;
+        double nx = 0, ny = 0, nz = 0; // x, y, z of the divded values
+        double cx = 0, cz = 0;         // x, y for the coordinates for M (starting point for top insert)
+        double px = 0, py = 0;         // x, y for the coordinates for M (for two tabs that holds the phone)
+        double ppx = 0, ppy = 0;       // x, y for the coordinates for M (for the peaker)
 
+        // initialization (to avoid NULL)
         phone_box = "";
         phone_in = "";
         phone_tab = "";
@@ -472,9 +487,11 @@ public class Box
         p_tab_in1 = "";
         p_peak = "";
 
+        // divide each side by 5 to get 3 segments for normal sides and two tabs
         nx = length / 5;
         ny = height / 5;
         nz = width / 5;
+
         cx = (2 * nx) + (nx / 2);
         cz = nz + (nz / 2);
 
@@ -482,7 +499,7 @@ public class Box
         phone_in += svg_base + "\"phone_insert\"" + svg_style_path + "M " + Double.toString(cx + 0.1) + " " + Double.toString(cz + 0.1) + " ";
         phone_in += "h1.5 v0.75 h-3.0 v-0.75 h1.5" + stroke + svg_tail;
 
-        //-------------------------------------two tabs-------------------------------------
+        //----- Two Tabs that Hold the Phone -----
 
         phone_tab += svg_base + "\"phone_tab\"" + svg_style_path + "M " + Double.toString(0.1) + " " + Double.toString(0.1 + (2* width) + (2* 0.5)) + " ";
         phone_tab += "h1.5 v0.1 h"+ Double.toString(thick) + " v0.2 h "+ Double.toString(thick * -1) + " v0.1 h-1.5 v-0.4" + stroke + svg_tail;
@@ -490,7 +507,7 @@ public class Box
         phone_tab += svg_base + "\"phone_tab1\"" + svg_style_path + "M " + Double.toString(0.1) + " " + Double.toString(0.1 + (2* width) + (3* 0.5)) + " ";
         phone_tab += "h1.5 v0.1 h"+ Double.toString(thick) + " v0.2 h "+ Double.toString(thick * -1) + " v0.1 h-1.5 v-0.4" + stroke + svg_tail;
 
-        // ------------------------------------- two inserts --------------------------------
+        //----- Two Holes that serve as Inserts for the Two Tabs -----
         
         px = length + 0.6 + (nx - thick) + (nx / 2);
         py = (ny - thick) + (2 * ny);
@@ -501,13 +518,13 @@ public class Box
         p_tab_in1 += svg_base + "\"phone_tab_insert\"" + svg_style_path + "M " + Double.toString(px + (2 * nx)) + " " + Double.toString(py) + " ";
         p_tab_in1 += "h0.1 v"  + Double.toString(thick) + " h-0.2 v" + Double.toString(thick * -1) + " h0.1" + stroke + svg_tail;
 
-        // ----------------------------------- phone peaker----------------------------------
+        //----- Phone peaker(?), the small space where the user will insert the charging cable -----
 
         ppx = 0.6 + length + (nx - thick) + nx + (nx / 2);
         ppy = 0.1 + ny;
 
         p_peak += svg_base + "\"phone_peaker\"" + svg_style_path + "M " + Double.toString(ppx) + " " + Double.toString(ppy) + " ";
-        p_peak += "h1.5 v0.75 h-3.0 v-0.75 h1.5" + stroke + svg_tail;
+        p_peak += "h1.5 v0.75 h-1.375 v0.25 h-0.25 v-0.25 h-1.375 v-0.75 h1.5" + stroke + svg_tail;
     }
 	
     public static void main( String[] args )
