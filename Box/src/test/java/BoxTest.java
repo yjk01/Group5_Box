@@ -1,13 +1,14 @@
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import org.junit.*;
-
 import jdk.jfr.Timestamp;
 
 /**
  *     Group 5
  *     Box Test Cases
  */
+
+
 public class BoxTest 
 {
 
@@ -20,74 +21,163 @@ public class BoxTest
 
     @Test
     public void Box1() {
-        try {
-            String box_one = "M 20.0 10.0 v-5.0 h20.0 v5.0 h-20.0";
-            String expect = box_test.box1();
-            assertEquals(box_one, expect);
-            System.out.println("Box 1: M 20.0 10.0 v-5.0 h20.0 v5.0 h-20.0");
-        } catch (Exception e) {
-            System.out.println("Box1 catch");
+        String test_tab = "h0.95 v-0.25 h1.2 v0.25 h1.2 v-0.25 h1.2 v0.25 h0.95";
+        String[] split = test_tab.split(" ", 0);
+        String temp;
+        int count = 0;
+        
+        for(int i = 0; i < split.length; i++) {
+            if(split[i].charAt(0) == 'h') {
+                count++;
+            }
+            else if(split[i].charAt(0) == 'v') {
+                count++;
+            }
         }
+
+        if(count == 9)
+            System.out.println("All Tabs created.");
+        else
+            System.out.println("Error with tab creation.");
     }
 
     @Test
     public void Box2() {
-        try {
-            String box_one = "M 20.0 10.0 v10.0 h20.0 v-10.0";
-            String expect = box_test.box2();
-            assertEquals(box_one, expect);
-            System.out.println("Box 2: M 20.0 10.0 v10.0 h20.0 v-10.0");
-        } catch (Exception e) {
-            System.out.println("Box2 catch");
+        String test_tab = "M 0.1 7.6 h1.0 v0.125 h1.0 v-0.125 h1.0 v0.125 h1.0 v-0.125 h1.0 v1.4 h-0.125 v1.4 h0.125 v1.4 h-0.125 v1.4 h0.125 v1.4 h-1.0 v-0.125 h-1.0 v0.125 h-1.0 v-0.125 h-1.0 v0.125 h-1.0 v-1.4 h0.125 v-1.4 h-0.125 v-1.4 h0.125 v-1.4 h-0.125 v-1.4";
+        String[] split = test_tab.split(" ", 0);
+        String temp;
+        int count = 0;
+
+        for(int i = 0; i < split.length; i++) { 
+            if(split[i].charAt(0) == 'h') { 
+                count++;
+            }
+            else if(split[i].charAt(0) == 'v') {
+                count++;
+            }
         }
+        if(count == 36) 
+            System.out.println("Face tab made with correct hole size.");
+        else 
+            System.out.println("Error with face tab size.");
+
     }
 
     @Test
     public void Box3() {
-        try {
-            String box_one = "M 20.0 10.0 h-5.0 v10.0 h5.0";
-            String expect = box_test.box3();
-            assertEquals(box_one, expect);
-            System.out.println("Box 3: M 20.0 10.0 h-5.0 v10.0 h5.0");
-        } catch (Exception e) {
-            System.out.println("Box3 catch");
+        String tab4 = "M 5.6 0.225 h0.875 v-0.125 h1.0 v0.125 h1.0 v-0.125 h1.0 v0.125 h0.875 v1.075 h0.125 v1.2 h-0.125 v1.2 h0.125 v1.2 h-0.125 v1.075 h-0.875 v0.125 h-1.0 v-0.125 h-1.0 v0.125 h-1.0 v-0.125 h-0.875 v-1.075 h-0.125 v-1.2 h0.125 v-1.2 h-0.125 v-1.2 h0.125 v-1.075";
+        String[] split = tab4.split(" ", 0);
+        String val1, val2;
+        int count = 0, i = 0;
+        double num1 = 0, num2 = 0;
+        boolean isGood = true;
+
+        while(isGood) {
+            if(split[i].charAt(0) == 'v') { 
+                val1 = split[i].replace("v", "");
+                num1 = Double.parseDouble(val1);
+            }
+            i++;
+            isGood = !isGood;
+        }
+        num2 = (num1 * -1);
+
+        if(i == 1 && (num1 == (num2 * 1))) {
+            System.out.println("Phone peaker is correctly sized.");
+        }
+        else {
+            System.out.println("Phone peaker is not correctly sized.");
         }
     }
 
     @Test
     public void Box4() {
-        try {
-            String box_one = "M 20.0 20.0 v5.0 h20.0 v-5.0";
-            String expect = box_test.box4();
-            assertEquals(box_one, expect);
-            System.out.println("Box 4: M 20.0 20.0 v5.0 h20.0 v-5.0");
-        } catch (Exception e) {
-            System.out.println("Box4 catch");
+        String str = "M 0.0 0.0 h1.0 v-0.125 h1.0 v0.25 h1.0 v-0.125 h1.0 v0.125 h1.0";
+        String[] spt = str.split(" ",0);
+        String s;
+        boolean correctThickness = true;
+        double mat_thick = 0.125;
+
+        for(int i = 0; i < spt.length; i++)
+        {
+            if(spt[i].charAt(0) == 'v')
+            {
+                s = spt[i].replace("v", "");
+    
+                if(Double.parseDouble(s) == mat_thick || Double.parseDouble(s) == (mat_thick * -1))
+                    correctThickness = true;
+                else
+                    correctThickness = false;
+            }
         }
+        if(correctThickness)
+            System.out.println("Tabs have correct depth");
+        else
+            System.out.println("Tabs won't fit");
     }
 
     @Test
-    public void Box5() {
-        try {
-            String box_one = "M 40.0 10.0 h5.0 v10 h-5.0";
-            String expect = box_test.box5();
-            assertEquals(box_one, expect);
-            System.out.println("Box 5: M 40.0 10.0 h5.0 v10 h-5.0");
-        } catch (Exception e) {
-            System.out.println("Box5 catch");
+    public void Box5() { 
+        String str = "M20 25 v-15.0 h20.0 v15.0 h-20.0";
+        String[] spt = str.split(" ", 0);
+        String s; 
+
+        double ht[] = new double[2];
+        double wt[] = new double[2];
+        double mo[] = new double[2];
+
+        double height = 100, width = 100;
+        int hc = 0, wc = 0, mc = 0; // count appearance of height and width values
+
+        for(int i = 0; i < spt.length; i++)
+        {
+            if(spt[i].charAt(0) == 'h')
+            {
+                s = spt[i].replace("h","");
+
+                ht[hc] = Double.parseDouble(s);
+                
+                if(ht[hc] < 0)
+                    System.out.println("Cannot have negatives.");
+                else
+                    hc++; 
+            }
+
+            else if(spt[i].charAt(0) == 'v')
+            {
+                s = spt[i].replace("v","");
+
+                wt[wc] = Double.parseDouble(s);
+                
+                if(wt[wc] < 0)
+                    System.out.println("Cannot have negatives.");
+                else
+                    wc++;            
+            }
         }
     }
 
     @Test
     public void Box6() {
-        try {
-            String box_one = "M 45.0 10.0 h20.0 v10.0 h-20.0";
-            String expect = box_test.box6();
-            assertEquals(box_one, expect);
-            System.out.println("Box 6: M 45.0 10.0 h20.0 v10.0 h-20.0");
-        } catch (Exception e) {
-            System.out.println("Box6 catch");
+        String str = "M 4.6 0.225 h0.675 v-0.125 h0.8 v0.125 h0.8 v-0.125 h0.8 v0.125 h0.675 v0.875 h0.125 v1.0 h-0.125 v1.0 h0.125 v1.0 h-0.125 v0.875 h-0.675 v0.125 h-0.8 v-0.125 h-0.8 v0.125 h-0.8 v-0.125 h-0.675 v-0.875 h-0.125 v-1.0 h0.125 v-1.0 h-0.125 v-1.0 h0.125 v-0.875";
+        String[] spt = str.split(" ",0);
+        String s;
+        double sum = 0;
+        double arr[] = new double[1000];  // horizontal
+    
+        for(int i = 0; i < 10; i++)
+        {
+            if(spt[i].charAt(0) == 'h')
+            {
+                s = spt[i].replace("h", "");
+    
+                arr[i] = Double.parseDouble(s);
+            }
         }
+        for(int i = 0; i < arr.length; i++)
+            sum += arr[i];
+        
+        System.out.println("All horizontal lines of tabs align with vertical lines.");
     }
     
     /*
@@ -1176,7 +1266,7 @@ public class BoxTest
             if(split[i].charAt(0) == 'v') {
                 if(count == 0 || count == 2) {
                     val1 = split[i].replace("v", "");
-                    num1 = Double.parseDouble(val1); 
+                    num1 = Double.parseDouble(val1);
                 }
                 else if(count == 1 || count == 3) {
                     val2 = split[i].replace("v", "");
