@@ -1,5 +1,5 @@
 /*
-    Contributors: Jun Kim, Julio Lopez 
+    Contributors: Jun Kim, Julio Lopez, Miranda Hixson 
     Class: CS374
     Assignment: Final Box Project
     Due Date: 05/04/2021
